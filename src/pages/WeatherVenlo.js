@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import Tile from "../components/tile"
+import Tile from "../components/tile";
 import axios from "axios";
 import SearchBar from "../components/searchBar/SearchBar";
+import {Link} from "react-router-dom";
 import Button from "../components/button";
-
 const apiKey = '9132b59a13a060e8812c4d0186286504';
 
 function WeatherVenlo () {
     const [weatherData, setWeatherData] = useState({});
-    const location = "Venlo"
+    const [location, setLocation] = useState('');
 
     async function fetchData() {
         try {
-            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=venlo,nl&appid=${apiKey}&lang=nl&units=metric`);
+            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location},nl&appid=${apiKey}&lang=nl&units=metric`);
             console.log(result.data);
             setWeatherData(result.data);
         } catch (e) {
@@ -23,13 +23,11 @@ function WeatherVenlo () {
     return (
         <>
             <main>
-
                 <Tile title="Weersverwachting">
-
                 </Tile>
                 <div>
 
-
+                    <SearchBar setLocationHandler={setLocation} />
                     <span className="location-details">
 
                     {Object.keys(weatherData).length > 0 &&
@@ -46,8 +44,8 @@ function WeatherVenlo () {
                         </>
                     }
                         <Button type="button" onClick={fetchData}>
-                        Wat voor weer wordt het ?
-                    </Button>
+                            Wat voor weer wordt het ?
+                        </Button>
                 </span>
                 </div>
             </main>

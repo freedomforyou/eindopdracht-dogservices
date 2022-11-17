@@ -1,5 +1,4 @@
 import React from 'react';
-import PageHeader from '../components/PageHeader';
 import contactpic from "../assets/contactpic.jpg";
 import Tile from "../components/tile";
 
@@ -32,19 +31,25 @@ const ContactForm = () => {
                             <label>
                                 Naam
                             </label>
-                            <input type="text" id="name" required />
+                            <input className="inputs" type="text" id="name" required />
                         </section>
                         <section>
                             <label htmlFor="email">
                                 Email
                             </label>
-                            <input type="email" id="email" required />
+                            <input className="inputs" type="email" id="email" required />
+                        </section>
+                        <section>
+                            <label htmlFor="phone">
+                                Telefoonnr (optioneel)
+                            </label>
+                            <input className="inputs" type="phone" id="phone" required />
                         </section>
                         <section>
                             <label htmlFor="message">
                                 Uw bericht:
                             </label>
-                            <textarea id="message" required />
+                            <textarea className="inputs" id="message" required />
                         </section>
                         <section>
 

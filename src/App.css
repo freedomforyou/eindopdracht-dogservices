@@ -152,3 +152,18 @@ button:disabled {
 button + button {
     margin-left: 12px;
 }
+
+.center {
+
+}
+
+.inputs {
+    width: 93%;
+
+}
+
+.submit {
+    width: 50%;
+    color: black;
+
+}

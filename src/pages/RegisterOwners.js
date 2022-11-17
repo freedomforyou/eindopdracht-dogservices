@@ -50,35 +50,35 @@ function RegistrationOwners () {
                     </section>
                     <section>
                         <label htmlFor="firstName">Voornaam  </label>
-                        <input placeholder="Uw voornaam" {...register("firstName")} />
+                        <input className="inputs" placeholder="Uw voornaam" {...register("firstName")} />
                     </section>
                     <section>
                         <label htmlFor="lastName">Achternaam  </label>
-                        <input placeholder="Uw achternaam" {...register("lastName")} />
+                        <input className="inputs" placeholder="Uw achternaam" {...register("lastName")} />
                     </section>
                     <section>
                         <label htmlFor="address">Adres   </label>
-                        <input placeholder="Uw adres" {...register("address")} />
+                        <input className="inputs" placeholder="Uw adres" {...register("address")} />
                     </section>
                     <section>
                         <label htmlFor="phoneNumber">Telefoonnr </label>
-                        <input placeholder="Uw telefoonnr" {...register("phoneNumber")} />
+                        <input className="inputs" placeholder="Uw telefoonnr" {...register("phoneNumber")} />
                     </section>
                     <section className="password">
                         <label className="form__label" htmlFor="password">Wachtwoord  </label>
-                        <input className="form__input" type="password" id="password" placeholder="Wachtwoord"/>
+                        <input className="inputs" type="password" id="password" placeholder="Wachtwoord"/>
                     </section>
                     <section className="confirm-password">
                         <label className="form__label" htmlFor="confirmPassword">Bevestig wachtwoord  </label>
-                        <input className="form__input" type="password" id="confirmPassword" placeholder="Bevestig wachtwoord"/>
+                        <input className="inputs" type="password" id="confirmPassword" placeholder="Bevestig wachtwoord"/>
                     </section>
                     <section>
                         <label htmlFor="dogRace">Uw hondenras  </label>
-                        <input placeholder="Uw hondenras" {...register("dogRace")} />
+                        <input className="inputs" placeholder="Uw hondenras" {...register("dogRace")} />
                     </section>
                     <section>
                         <label htmlFor="dogRace">Leeftijd hond  </label>
-                        <input placeholder="Leeftijd hond" {...register("dogAge")} />
+                        <input className="inputs" placeholder="Leeftijd hond" {...register("dogAge")} />
                         <select>
                             <option selected value="0-3 jaar">0-3 jaar</option>
                             <option value="4-6 jaar">4-6 jaar</option>
@@ -88,7 +88,7 @@ function RegistrationOwners () {
                     </section>
                     <section>
                         <label htmlFor="dogRace">Karakter hond  </label>
-                        <input placeholder="Karakter hond" {...register("dogCharacter")} />
+                        <input className="inputs" placeholder="Karakter hond" {...register("dogCharacter")} />
                         <select>
                             <option value="Rustig">Rustig</option>
                             <option value="Wild">Wild</option>
@@ -98,11 +98,11 @@ function RegistrationOwners () {
                     </section>
                     <section>
                         <label htmlFor="dogRace">Korte beschrijving hond </label>
-                        <input placeholder="Beschrijving hond" {...register("dogDescription")} />
+                        <input className="inputs" placeholder="Beschrijving hond" {...register("dogDescription")} />
                     </section>
                     <section>
                         <label htmlFor="email">Email  </label>
-                        <input
+                        <input className="inputs"
                             placeholder="Uw email adres"
                             type="text"
                             {...register("email")}
@@ -130,7 +130,7 @@ function RegistrationOwners () {
 
                     <section>
                         <p>Overdag of 's avonds ?</p>
-                        <input
+                        <input className="inputs"
                             type="radio"
                             value="daytime"
                             name="timeslot"
@@ -139,7 +139,7 @@ function RegistrationOwners () {
                             onChange={(e) => toggleDeliveryTimeslot(e.target.value)}
                         />
                         <label htmlFor="timeslot-field-daytime">Overdag</label>
-                        <input
+                        <input className="inputs"
                             type="radio"
                             value="evening"
                             checked={deliveryTimeslot === 'evening'}
@@ -150,8 +150,8 @@ function RegistrationOwners () {
                         <label htmlFor="timeslot-field-evening">'s Avonds</label>
                     </section>
                     <section>
-                        <label htmlFor="remark-field">Opmerking</label>
-                        <textarea
+                        <label htmlFor="remark-field">Eventuele opmerkingen</label>
+                        <textarea className="inputs"
                             name="remark"
                             id="remark-field"
                             value={remark}
@@ -171,7 +171,7 @@ function RegistrationOwners () {
                         <label htmlFor="agree-field">Ik ga akkoord met de voorwaarden</label>
                     </section>
 
-                    <button type="submit">
+                    <button className="submit" type="submit">
                         Verzenden
                     </button>
                 </form>

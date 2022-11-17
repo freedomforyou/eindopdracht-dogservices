@@ -17,18 +17,18 @@ function Login({ toggleAuth }) {
             <Tile img={login} imgDescription="Login" />
             <article>
                 <section>
-                    <h1>Login pagina</h1>
+                    <h1 className="center">Login pagina</h1>
                     <label>
                         Email adres:
-                        <input type="text" name="email" />
+                        <input className="inputs" type="text" name="email" />
                     </label>
                     <label>
                         Wachtwoord:
-                        <input type="text" name="password" />
+                        <input className="inputs" type="text" name="password" />
                     </label>
                 </section>
                 <section>
-                    <button type="button" onClick={signIn}>
+                    <button className="submit" type="button" onClick={signIn}>
                         Inloggen
                     </button>
                 </section>

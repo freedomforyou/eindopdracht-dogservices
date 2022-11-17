@@ -18,7 +18,7 @@ function OverviewTest() {
                         return <li key={dogservice.id}>
                             <h4>{dogservice.id}</h4>
                             <h4>{dogservice.title}</h4>
-                            <h4>Locatie: {dogservice.location}</h4>
+                            <h4>Locatie: {dogservice.content}</h4>
 
                             <Button>
                                 <Link to={`dogservice/${dogservice.id}`}>
@@ -28,6 +28,22 @@ function OverviewTest() {
                         </li>
                     })}
                 </ul>
+                {/*<ul>*/}
+                {/*    {dogservices.data.services.map((dogservice) => {*/}
+
+                {/*        return <li key={dogservice.data.services.id}>*/}
+                {/*            <h4>{dogservice.data.services.id}</h4>*/}
+                {/*            <h4>{dogservice.data.services.title}</h4>*/}
+                {/*            <h4>Locatie: {dogservice.data.services.content}</h4>*/}
+
+                {/*            <Button>*/}
+                {/*                <Link to={`dogservice/${dogservice.data.services.id}`}>*/}
+                {/*                    {dogservice.data.services.title}*/}
+                {/*                </Link>*/}
+                {/*            </Button>*/}
+                {/*        </li>*/}
+                {/*    })}*/}
+                {/*</ul>*/}
             </main>
         </>
     );

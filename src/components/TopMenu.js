@@ -86,14 +86,14 @@ function TopMenu ({ isAuth, toggleAuth }) {
                             </li>
 
                             <li>
-                                <Button type="button" onClick={signOut}>
+                                <Button className="submit" type="button" onClick={signOut}>
                                     Uitloggen
                                 </Button>
                             </li>
                         </>
                         :
                         <li>
-                            <Button type="button">
+                            <Button className="submit" type="button" >
                                 <NavLink to="/login">
                                     Login
                                 </NavLink>

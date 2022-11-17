@@ -23,16 +23,16 @@ function DogserviceDetails () {
                     <Tile>
                         <h4>Locatie: {currentDogservice.location}</h4>
                         <h4>Ingeschreven sinds: {currentDogservice.date}</h4>
-                        <p>Korte beschrijving: "{currentDogservice.content}"</p>
-                        <p>Eigenaar: {currentDogservice.owner}</p>
+                        <p>Korte beschrijving: "{currentDogservice.title}"</p>
+                        <p>Eigenaar: {currentDogservice.serviceowner}</p>
                         <p>Adres: {currentDogservice.address}</p>
                         <p>Algemene beoordeling:</p>
                         <p>{currentDogservice.general}</p>
                     </Tile>
                 </section>
                 <section>
-                    <Tile img={chantaljansen} imgDescription={currentDogservice.owner} />
-                    <Tile name={currentDogservice.owner}>
+                    <Tile img={chantaljansen} imgDescription={currentDogservice.serviceowner} />
+                    <Tile name={currentDogservice.serviceowner}>
                     </Tile>
                 </section>
                 <section>

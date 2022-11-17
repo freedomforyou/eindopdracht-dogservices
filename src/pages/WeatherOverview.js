@@ -4,7 +4,6 @@ import axios from "axios";
 import SearchBar from "../components/searchBar/SearchBar";
 import {Link} from "react-router-dom";
 import Button from "../components/button";
-import WeatherVenlo from "./WeatherVenlo";
 const apiKey = '9132b59a13a060e8812c4d0186286504';
 
 function WeatherOverview() {
@@ -29,7 +28,7 @@ function WeatherOverview() {
                     <p>Geef een plaatsnaam in om de weersverwachting daar op te vragen zodat u hiermee rekening kunt houden als u uw uitlaatdienst gaat plannen.</p>
                     <ul>
                         <li>
-                            Geef een plaatsnaam in.
+                                Geef een plaatsnaam in.
                         </li>
                         <li>
                             Klik op 'Zoek plaats'.
@@ -64,8 +63,8 @@ function WeatherOverview() {
                         </>
                     }
                         <button type="button" onClick={fetchData}>
-                        Wat voor weer wordt het ?
-                    </button>
+                            Wat voor weer wordt het ?
+                        </button>
                 </span>
                 </div>
             </main>
