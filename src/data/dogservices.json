@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": "De vrolijke 4-voeters.",
+    "name" : "Chantal Jansen",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2020-10-04 23:33:22",
+    "location": "Venlo",
+    "address" : "Beethovenstraat 14, 5914 BN Venlo. Telefoon; 06-12347895",
+    "phonenumber" : "0627305326",
+    "general" : "Goed. Praat veel. Flexibel.",
+    "owner" : "Chantal Jansen",
+    "picture" : "ChantalJansen.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Aan de frisse lucht (Velden).",
+    "name" : "Peter Willemsen",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2020-01-28 07:50:06",
+    "location": "Velden",
+    "address" : "Beethovenstraat 14, 5911 AA Velden. Telefoon; 06-12347895",
+    "phone" : "0627305326",
+    "general" : "Matig. Weinig tijdkeus. Vriendelijk.",
+    "owner" : "Peter Willemsen",
+    "picture" : "ChantalJansen.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Uitlaatservice Baarlo.",
+    "name" : "Truus Jansen",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2021-11-03 13:43:01",
+    "location": "Baarlo",
+    "address" : "Beethovenstraat 14, 5911 RR Baarlo. Telefoon; 06-12347895",
+    "phone" : "0627305326",
+    "general" : "Redelijk. Wat zakelijk. Punctueel.",
+    "owner" : "Truus Jansen",
+    "picture" : "ChantalJansen.jpg"
+  },
+  {
+    "id": "4",
+    "title": "Uitlaatservice Tegelen.",
+    "name" : "Evelien Smits",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2021-06-23 00:48:31",
+    "location": "Tegelen",
+    "address" : "Beethovenstraat 14, 5912 GG Tegelen. Telefoon; 06-12347895",
+    "phone" : "0627305326",
+    "general" : "Goed. Flexibel. Kort en zakelijk.",
+    "owner" : "Evelien Smits",
+    "picture" : "ChantalJansen.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Uitlaatservice Blerick.",
+    "name" : "Ester Jacobs",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2020-03-25 16:18:31",
+    "location": "Blerick",
+    "address" : "Beethovenstraat 14, 5913 AA Blerick. Telefoon; 06-12347895",
+    "phone" : "0627305326",
+    "general" : "Goed. Erg punctueel. Vriendelijk.",
+    "owner" : "Ester Jacobs",
+    "picture" : "ChantalJansen.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Uitlaatservice Maasbree.",
+    "name" : "F. van Dijk",
+    "content": "We maken een fijne wandeling met uw hond in een groepje van maximaal 5 honden.",
+    "date": "2020-03-13 12:47:13",
+    "location": "Maasbree",
+    "address" : "Beethovenstraat 14, 5914 DD  Maasbree. Telefoon; 06-12347895",
+    "phone" : "0627305326",
+    "general" : "Matig. Soms laat. Leuke mensen.",
+    "owner" : "F. van Dijk",
+    "picture" : "ChantalJansen.jpg"
+  }
+]
