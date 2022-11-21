@@ -20,14 +20,15 @@ const ContactForm = () => {
         <>
 
             <main>
-                <section>
+                <article>
                     <h3>Neemt u gerust contact met ons op.</h3>
                     <p>Wij reageren op werkdagen binnen 24 uur. </p>
                     <Tile img={contactpic} imgDescription="Contact" />
-                </section>
+                </article>
                 <Tile>
                     <form onSubmit={onSubmit}>
                         <section>
+                            <h4><h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4></h4>
                             <label>
                                 Naam
                             </label>
@@ -41,7 +42,7 @@ const ContactForm = () => {
                         </section>
                         <section>
                             <label htmlFor="phone">
-                                Telefoonnr (optioneel)
+                                Telefoonnr
                             </label>
                             <input className="inputs" type="phone" id="phone" required />
                         </section>

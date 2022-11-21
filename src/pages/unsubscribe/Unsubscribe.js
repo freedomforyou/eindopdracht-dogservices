@@ -1,6 +1,6 @@
 import React from 'react';
 import unsubscribe from "../assets/unsubscribe.png";
-import Tile from "../components/tile";
+import Tile from "../components/tile/tile";
 import {Link} from "react-router-dom";
 
 

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Tile from "../components/tile";
+import Tile from "../components/tile/tile";
 import axios from "axios";
 import SearchBar from "../components/searchBar/SearchBar";
 import {Link} from "react-router-dom";
-import Button from "../components/button";
+import Button from "../components/button/button";
 const apiKey = '9132b59a13a060e8812c4d0186286504';
 
-function WeatherOverview() {
+function WeatherVenlo () {
     const [weatherData, setWeatherData] = useState({});
     const [location, setLocation] = useState('');
 
@@ -23,29 +23,10 @@ function WeatherOverview() {
     return (
         <>
             <main>
-
                 <Tile title="Weersverwachting">
-                    <p>Geef een plaatsnaam in om de weersverwachting daar op te vragen zodat u hiermee rekening kunt houden als u uw uitlaatdienst gaat plannen.</p>
-                    <ul>
-                        <li>
-                                Geef een plaatsnaam in.
-                        </li>
-                        <li>
-                            Klik op 'Zoek plaats'.
-                        </li>
-                        <li>
-                            Klik vervolgens op 'Wat voor weer wordt het ?'
-                        </li>
-                    </ul>
-                    <p>Opm: kleinere plaatsen geven geen resultaat.</p>
-
-                    <Button type="button">
-                        <Link to="/weervenlo" style={{ textDecoration: 'none' }}>Weersverwachting Venlo</Link>
-                    </Button>
-
                 </Tile>
                 <div>
-                    <p>   </p>
+
                     <SearchBar setLocationHandler={setLocation} />
                     <span className="location-details">
 
@@ -62,9 +43,9 @@ function WeatherOverview() {
                             <h4>Gemiddelde temperatuur : {weatherData.main.temp}&deg;C</h4>
                         </>
                     }
-                        <button type="button" onClick={fetchData}>
+                        <Button type="button" onClick={fetchData}>
                             Wat voor weer wordt het ?
-                        </button>
+                        </Button>
                 </span>
                 </div>
             </main>
@@ -72,4 +53,4 @@ function WeatherOverview() {
     );
 }
 
-export default WeatherOverview;
+export default WeatherVenlo;

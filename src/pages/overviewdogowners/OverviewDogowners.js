@@ -17,12 +17,13 @@ function OverviewDogowners() {
 
                         return <li key={dogowner.id}>
                             <h4>{dogowner.id}</h4>
-                            <h4>{dogowner.title}</h4>
+                            <h4>{dogowner.name}</h4>
                             <h4>Locatie: {dogowner.location}</h4>
-
+                            <h4>Hondenras:</h4>
+                            <p>{dogowner.dograce}</p>
                             <Button>
                                 <Link to={`dogowner/${dogowner.id}`}>
-                                    {dogowner.title}
+                                    {dogowner.name}
                                 </Link>
                             </Button>
                         </li>

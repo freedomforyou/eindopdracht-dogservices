@@ -36,8 +36,9 @@ function RegistrationOwners () {
         <>
             <main>
                 <section>
+                    <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
                     <h1>Registratie Hondenbezitters</h1>
-                    <h3>U kunt zich gratis en vrijblijvend inschrijven</h3>
+                    <h4>U kunt zich gratis en vrijblijvend inschrijven. Uw gegevens zijn veilig en worden niet met derden gedeeld.</h4>
                     <p>U kunt zich ten alle tijde weer uitschrijven. Uw gegevens worden dan definitief verwijderd.</p>
                 </section>
 
@@ -78,7 +79,7 @@ function RegistrationOwners () {
                     </section>
                     <section>
                         <label htmlFor="dogRace">Leeftijd hond  </label>
-                        <input className="inputs" placeholder="Leeftijd hond" {...register("dogAge")} />
+                        {/*<input className="inputs" placeholder="Leeftijd hond" {...register("dogAge")} />*/}
                         <select>
                             <option selected value="0-3 jaar">0-3 jaar</option>
                             <option value="4-6 jaar">4-6 jaar</option>
@@ -88,7 +89,7 @@ function RegistrationOwners () {
                     </section>
                     <section>
                         <label htmlFor="dogRace">Karakter hond  </label>
-                        <input className="inputs" placeholder="Karakter hond" {...register("dogCharacter")} />
+                        {/*<input className="inputs" placeholder="Karakter hond" {...register("dogCharacter")} />*/}
                         <select>
                             <option value="Rustig">Rustig</option>
                             <option value="Wild">Wild</option>

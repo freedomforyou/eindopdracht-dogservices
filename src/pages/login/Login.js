@@ -14,10 +14,14 @@ function Login({ toggleAuth }) {
 
     return (
         <main>
-            <Tile img={login} imgDescription="Login" />
+            <section>
+                <Tile img={login} imgDescription="Login" />
+            </section>
+
             <article>
                 <section>
                     <h1 className="center">Login pagina</h1>
+                    <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
                     <label>
                         Email adres:
                         <input className="inputs" type="text" name="email" />

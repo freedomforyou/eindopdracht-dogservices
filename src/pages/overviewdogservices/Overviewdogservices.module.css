@@ -1,0 +1,44 @@
+
+test {
+    background-color: aquamarine;
+    color: black;
+    margin: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    width: 1100px;
+    padding: 10px;
+}
+
+overview {
+    background-color: aquamarine;
+    color: black;
+    margin: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1100px;
+    padding: 10px;
+}
+
+
+img {
+    /*height: 300px;*/
+    width: 200px;
+}
+
+great
+
+{
+    background-color: red;
+    color: black;
+    margin: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+}

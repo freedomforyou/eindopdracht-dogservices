@@ -13,7 +13,8 @@ function TopMenu ({ isAuth, toggleAuth }) {
     }
 
     return (
-        <nav>
+        <top>
+            {/*<div>*/}
             <div className="nav-container">
                 <ul>
 
@@ -103,7 +104,7 @@ function TopMenu ({ isAuth, toggleAuth }) {
                     }
                 </ul>
             </div>
-        </nav>
+        </top>
     );
 }
 
