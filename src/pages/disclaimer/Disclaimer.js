@@ -1,7 +1,8 @@
 import React from 'react';
-import disclaimerpic from "../assets/disclaimerpic.jpg";
+import styles from './Disclaimer.module.css'
+import disclaimerpic from "../../assets/disclaimerpic.jpg";
 // import PageHeader from "../components/PageHeader";
-import Tile from "../components/tile";
+import Tile from "../../components/tile/tile";
 
 function DisclaimerPage() {
     return (

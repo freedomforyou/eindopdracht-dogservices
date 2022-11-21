@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-import Button from "./button";
+import Button from "../button/button";
 
 
 function TopMenu ({ isAuth, toggleAuth }) {

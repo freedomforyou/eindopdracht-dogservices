@@ -1,6 +1,7 @@
 import React from 'react';
-import contactpic from "../assets/contactpic.jpg";
-import Tile from "../components/tile";
+import styles from './Contact.module.css'
+import contactpic from "../../assets/contactpic.jpg";
+import Tile from "../../components/tile/tile";
 
 const ContactForm = () => {
 

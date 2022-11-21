@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Opdrachtbeschrijving
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inleiding
 
-## Available Scripts
+Je gaat een bloggingplatform bouwen waarbij sommige url's niet toegankelijk zijn voor gebruikers die niet zijn ingelogd.
+Je gaat ook concepten als doorlinken, dynamische parameters en een nep-login toepassen. De "login"-funtionaliteit is
+voor deze opdracht met opzet versimpelt.
 
-In the project directory, you can run:
+![screenshot](src/assets/screenshot.png)
 
-### `npm start`
+## Applicatie starten
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de `node_modules` door het volgende
+commando in de terminal te runnen:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm run start
+```
 
-### `npm run build`
+of gebruik de WebStorm knop (npm start). Open [http://localhost:3000](http://localhost:3000/) om de pagina in de browser
+te bekijken. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Webpaginas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+De website heeft x paginas:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Home pagina (`/`)
+2. Login pagina (`/login`)
+3. Blog Overzicht pagina (`/blogposts`)
+4. Blogpost pagina (`/blog/:blogId`)
 
-### `npm run eject`
+Er zijn 2 JSON data files :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. dogowners.json
+2. dogservices.json
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Zoals je hebt gezien is er in de `App.js` een stukje state aanwezig die registreert of iemand ingelogd is of niet. Deze
+informatie ga je gebruiken om elementen conditioneel weer te geven, maar ook om jouw routes te beveiligen.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Zorg ervoor dat wanneer een gebruiker op de "Inlog"-knop op de Login pagina klikt, de `isAuthenticated` state
+  van `true` naar `false` getoggled wordt. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Je zult de waarde en setter-functie (callback prop) dus vanaf `App.js` moeten
+  doorgeven aan de pagina of component die deze waardes nodig heeft.
 
-### Code Splitting
+- Als een bezoeker *wel* ingelogd is, moet er een "uitloggen"-knop in de navigatie staan. Als je daarop klikt wordt de
+  gebruiker direct uitgelogd en naar de home-pagina gestuurd.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Maak voor de beveiligde routes een apart `<PrivateRoute>` component voor die je kunt hergebruiken!
+- Voeg een React hook form toe aan de login pagina waar de gebruiker ook daadwerkelijk gegevens kan invullen. Je kunt
+  dan een `users.json` bestand maken met gebruikers erin, zodat je iemand daadwerkelijk kunt laten "inloggen" met een
+  bestaand account.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

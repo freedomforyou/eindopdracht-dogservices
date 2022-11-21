@@ -1,9 +1,10 @@
 import React from 'react';
-import dogowners from '../data/dogowners.json';
+import styles from './Dogowners.module.css'
+import dogowners from '../../data/dogowners.json';
 import { useParams, Link } from 'react-router-dom';
-import Tile from "../components/tile";
-import Button from "../components/button";
-import jacobpietersen from "../assets/jacobpietersen.jpg";
+import Tile from "../../components/tile/tile";
+import Button from "../../components/button/button";
+import jacobpietersen from "../../assets/jacobpietersen.jpg";
 
 function DogownerDetails () {
     const { dogownerId } = useParams();

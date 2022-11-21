@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import styles from './RegisterServices.module.css'
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
 import {Link} from "react-router-dom";

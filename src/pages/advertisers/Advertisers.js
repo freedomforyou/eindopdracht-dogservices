@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Tile from "../components/tile";
-import Button from "../components/button";
-import labrador from "../assets/Labradorboek.png";
-import labradoodle from "../assets/Labradoodleboek.png";
-import duitseherder from "../assets/Duitseherderboek.png";
-import doberman from "../assets/doberman.jpg";
-import bordercollie from "../assets/Bordercollieboek.png";
+import styles from './Advertisers.module.css'
+import Tile from "../../components/tile/tile";
+import Button from "../../components/button/button";
+import labrador from "../../assets/Labradorboek.png";
+import labradoodle from "../../assets/Labradoodleboek.png";
+import duitseherder from "../../assets/Duitseherderboek.png";
+import doberman from "../../assets/doberman.jpg";
+import bordercollie from "../../assets/Bordercollieboek.png";
 
 
 function Advertisers() {

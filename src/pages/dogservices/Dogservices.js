@@ -1,9 +1,10 @@
 import React from 'react';
-import dogservices from '../data/dogservices.json';
+import styles from './Dogservices.module.css'
+import dogservices from '../../data/dogservices.json';
 import { useParams, Link } from 'react-router-dom';
-import Tile from "../components/tile";
-import chantaljansen from "../assets/1.jpg";
-import Button from "../components/button";
+import Tile from "../../components/tile/tile";
+import chantaljansen from "../../assets/1.jpg";
+import Button from "../../components/button/button";
 
 function DogserviceDetails () {
     const { dogserviceId } = useParams();

@@ -1,3 +1,15 @@
+main {
+    background-color: aquamarine;
+    margin: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    border: 1px solid blue;
+    padding: 20px;
+}
+
 
 h1 {
     font-size: 30px;
@@ -10,8 +22,20 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1500px;
+    max-width: 100%;
     padding: 12px;
+}
+
+top {
+    background-color: transparent;
+    color: blue;
+    margin: 10px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1100px;
+    padding: 10px;
 }
 
 nav a,
@@ -22,6 +46,7 @@ nav a:visited {
 
 a {
     color: blue;
+    text-decoration: none;
 }
 
 nav ul {
@@ -34,80 +59,9 @@ nav ul {
     flex-basis: 300px;
     flex-grow: 0;
     flex-shrink: 0;
+
 }
 
-section {
-    background-color: aquamarine;
-    /*color: blue;*/
-    margin: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: normal;
-    width: 400px;
-    padding: 10px;
-    /*border: 1px solid blue;*/
-}
-
-main {
-    background-color: aquamarine;
-    margin: 10px 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1000px;
-    border: 1px solid blue;
-    padding: 20px;
-}
-
-article {
-    background-color: aquamarine;
-    margin: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1000px;
-    border: 1px solid blue;
-    padding: 20px;
-}
-
-article h1,
-article p {
-    text-transform: none;
-}
-
-ul {
-    list-style-type: none;
-    flex-basis: 950px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.active-link {
-    border-bottom: 2px solid white;
-}
-
-img {
-    /*height: 300px;*/
-    width: 300px;
-}
-
-footer {
-    background-color: aquamarine;
-    color: blue;
-    margin: 10px 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 1000px;
-    border: 1px solid blue;
-    padding: 20px;
-}
 
 .nav-container {
     background-color: transparent;
@@ -124,46 +78,4 @@ footer {
 
 .colums-2 {
     column-count: 2;
-}
-
-button {
-    border: 1px solid black;
-    background-color: aqua;
-    color: white;
-    font-size: 16px;
-    padding: 8px 16px;
-    cursor: pointer;
-
-}
-
-button:hover {
-    background-color: lightseagreen;
-    /*color: white;*/
-    transition: all .4s ease-in-out;
-}
-
-button:disabled {
-    cursor: not-allowed;
-    border-color: #D08169;
-    color: #D08169;
-}
-
-
-button + button {
-    margin-left: 12px;
-}
-
-.center {
-
-}
-
-.inputs {
-    width: 93%;
-
-}
-
-.submit {
-    width: 50%;
-    color: black;
-
 }

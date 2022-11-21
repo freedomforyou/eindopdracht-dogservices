@@ -1,26 +1,27 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Tile from "../components/tile";
-import Button from "../components/button";
-import kristel from "../assets/kristel.png";
-import peter from "../assets/peter.png";
-import dog from "../assets/dog.png";
-import doganimation1 from "../assets/doganimation1.gif";
-import dogservicepic from "../assets/dogservicepic.png";
+import styles from './Home.module.css'
+import Tile from "../../components/tile/tile";
+import Button from "../../components/button/button";
+import kristel from "../../assets/kristel.png";
+import peter from "../../assets/peter.png";
+import dog from "../../assets/dog.png";
+import doganimation1 from "../../assets/doganimation1.gif";
+import dogservicepic from "../../assets/dogservicepic.png";
 
 
 function Home() {
     return (
         <>
-            <main>
+            <home>
                 <Tile img={doganimation1} imgDescription="doganimation1" />
                 <Tile title="Welkom op onze Honden Uitlaatservice">
                     <p>Wij brengen honden eigenaren en mensen die honden uitlaten bij elkaar.</p>
                     <p>Als hondeigenaar kunt u zich <b>gratis</b> en vrijblijvend registreren om op zoek te gaan naar een geschikte hondenuitlaatdienst. Als hondenuitlater kunt u zich ook aanmelden en uw diensten aanbieden.</p>
                 </Tile>
-            </main>
+            </home>
             <p> </p>
-            <main>
+            <home>
                 <h1 id="about-us">Over Ons</h1>
                 <p className="colums-3">
                     Hallo, wij zijn <b>Kristel</b> en <b>Peter</b>. Wij zijn een stel en we zijn beide dol op honden.
@@ -28,9 +29,9 @@ function Home() {
                     Registreert u zich aub als hondenbezitter of als uitlater verderop op deze pagina.
                     Voor vragen, opmerkingen en suggesties neemt u gerust <Link to="/contact" style={{ fontWeight: 'bold' }} >contact</Link> met ons op.
                 </p>
-            </main>
+            </home>
             <p> </p>
-            <main>
+            <home>
                 <Tile title="Kristel Jansen-Wilms">
                     <p>31 jaar. Moeder van 2 kinderen. Woon in Venlo. Van beroep lerares op een basisschool. Hobbies : kinderen, honden, tuinieren en lezen.</p>
                 </Tile>
@@ -41,9 +42,9 @@ function Home() {
                     <p>34 jaar. Vader van 2 kinderen. Woon in Venlo. Van beroep accountant. Hobbies : kinderen, honden, klussen en gitaarspelen.</p>
                 </Tile>
 
-            </main>
+            </home>
             <p> </p>
-            <main>
+            <home>
                 <Tile title="Hondenbezitters">
                     <p>Meld u zich gerust gratis aan zodat uw vrolijke viervoeter regelmatig een frisse neus kan halen en de 'benen' kan strekken.</p>
                     <Button>
@@ -58,7 +59,7 @@ function Home() {
                         <Link to="/registerservices" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
                     </Button>
                 </Tile>
-            </main>
+            </home>
 
         </>
     );

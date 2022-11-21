@@ -1,6 +1,7 @@
 import React from 'react';
-import requirements from "../assets/requirements.jpg";
-import Tile from "../components/tile";
+import styles from './Requirements.module.css'
+import requirements from "../../assets/requirements.jpg";
+import Tile from "../../components/tile/tile";
 
 
 function RequirementsPage() {

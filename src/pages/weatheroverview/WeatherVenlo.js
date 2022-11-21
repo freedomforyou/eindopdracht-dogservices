@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Tile from "../components/tile/tile";
+import Tile from "../../components/tile/tile";
 import axios from "axios";
-import SearchBar from "../components/searchBar/SearchBar";
+import SearchBar from "../../components/searchBar/SearchBar";
 import {Link} from "react-router-dom";
-import Button from "../components/button/button";
+import Button from "../../components/button/button";
 const apiKey = '9132b59a13a060e8812c4d0186286504';
 
 function WeatherVenlo () {

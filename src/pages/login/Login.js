@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Login.module.css'
 import { useHistory } from 'react-router-dom';
-import Tile from "../components/tile";
-import login from "../assets/login.jpg";
+import Tile from "../../components/tile/tile";
+import login from "../../assets/login.jpg";
 
 
 function Login({ toggleAuth }) {

@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import {Route, Switch, Redirect, Link} from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Reviews from './pages/Reviews'
-import Contact from './pages/Contact'
-import Bottomlinks from "./components/Bottomlinks";
-import RequirementsPage from "./pages/Requirements";
-import DisclaimerPage from "./pages/Disclaimer";
-import PrivacyPage from "./pages/Privacy";
-import AdvertisersPage from './pages/Advertisers';
-import RegistrationPage from './pages/Registration';
-import RegistrationOwnersPage from './pages/RegisterOwners';
-import RegistrationServicesPage from './pages/RegisterServices';
-import WeatherOverview from "./pages/WeatherOverview";
-import DogownersPage from "./pages/Dogowners";
-import DogservicePage from "./pages/Dogservices"
-import UnsubscribePage from "./pages/Unsubscribe";
-import OverviewDogservices from "./pages/OverviewDogservices";
-import OverviewDogowners from "./pages/OverviewDogowners";
-import TopMenu from "./components/TopMenu";
-import WeatherVenlo from "./pages/WeatherVenlo";
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import Reviews from './pages/reviews/Reviews'
+import Contact from './pages/contact/Contact'
+import Bottomlinks from "./components/bottomlinks/Bottomlinks";
+import RequirementsPage from "./pages/requirements/Requirements";
+import DisclaimerPage from "./pages/disclaimer/Disclaimer";
+import PrivacyPage from "./pages/privacy/Privacy";
+import AdvertisersPage from './pages/advertisers/Advertisers';
+import RegistrationPage from './pages/registration/Registration';
+import RegistrationOwnersPage from './pages/registerowners/RegisterOwners';
+import RegistrationServicesPage from './pages/registerservices/RegisterServices';
+import WeatherOverview from "./pages/weatheroverview/WeatherOverview";
+import DogownersPage from "./pages/dogowners/Dogowners";
+import DogservicePage from "./pages/dogservices/Dogservices"
+import UnsubscribePage from "./pages/unsubscribe/Unsubscribe";
+import OverviewDogservices from "./pages/overviewdogservices/OverviewDogservices";
+import OverviewDogowners from "./pages/overviewdogowners/OverviewDogowners";
+import TopMenu from "./components/topmenu/TopMenu";
+import WeatherVenlo from "./pages/weatheroverview/WeatherVenlo";
 
 function PrivateRoute({ children, isAuth, ...rest}) {
     return (

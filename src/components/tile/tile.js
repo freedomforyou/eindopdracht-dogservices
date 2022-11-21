@@ -1,4 +1,5 @@
 import React from 'react';
+import "./tile.module.css"
 
 function Tile({ img, imgDescription, title, name, description, children }) {
     return (

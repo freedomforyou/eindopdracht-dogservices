@@ -1,6 +1,7 @@
 import React from 'react';
-import privacypic from "../assets/privacypic.jpg";
-import Tile from "../components/tile";
+import styles from './Privacy.module.css'
+import privacypic from "../../assets/privacypic.jpg";
+import Tile from "../../components/tile/tile";
 
 function PrivacyPage() {
     return (

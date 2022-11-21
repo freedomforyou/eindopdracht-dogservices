@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './Registration.module.css'
 import {Link} from "react-router-dom";
-import Tile from "../components/tile";
-import Button from "../components/button";
-import dog from "../assets/dog.png";
-import dogservicepic from "../assets/dogservicepic.png";
+import Tile from "../../components/tile/tile";
+import Button from "../../components/button/button";
+import dog from "../../assets/dog.png";
+import dogservicepic from "../../assets/dogservicepic.png";
 
 
 function Register () {
