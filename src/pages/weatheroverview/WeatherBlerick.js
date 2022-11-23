@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import styles from "./WeatherOverview.module.css";
-import venlo from "../../assets/Venlo.png";
+import blerick from "../../assets/Blerick.png";
 import Tile from "../../components/tile/tile";
 import Button from "../../components/button/button";
 import {Link} from "react-router-dom";
@@ -12,6 +12,7 @@ function WeatherVenlo () {
 
     async function fetchData() {
         try {
+            // Blerick heeft geen eigen weersverwachting, daarom Venlo gepakt
             const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=venlo,nl&appid=${apiKey}&lang=nl&units=metric`);
             console.log(result.data);
             setWeatherData(result.data);
@@ -25,12 +26,14 @@ function WeatherVenlo () {
             <span className={styles.test}>
                 <span className={styles.great}>
                     <div className={styles.picturetop} >
-                        <h1>Weersverwachting Venlo</h1>
-                         <Tile img={venlo} imgDescription="Venlo" />
+                        <h1>Weersverwachting Blerick</h1>
+                        <p>Opm : de weersverwachting voor Blerick is hetzelfde als die voor Venlo</p>
+                         <Tile img={blerick} imgDescription="Blerick" />
                             <button className={styles.submit} type="button" onClick={fetchData}>
                                 Wat voor weer wordt het ?
                             </button>
-                         <p>  </p>
+
+                        <p>  </p>
                             <Button type="button">
                                 <Link to="/weersoverzicht" style={{ textDecoration: 'none' }}>Terug naar overzicht</Link>
                             </Button>
@@ -42,7 +45,7 @@ function WeatherVenlo () {
                         <>
                             <div className={styles.weather}>
                                 <h3>Weersverwachting in:</h3>
-                                <h2>{weatherData.name}</h2>
+                                <h2>{weatherData.name}-Blerick</h2>
                                 <h4>Weertype : {weatherData.weather[0].description}</h4>
                                 <h4>Luchtvochtigheid : {weatherData.main.humidity} procent</h4>
                                 <h4>Windsnelheid : {weatherData.wind.speed} </h4>

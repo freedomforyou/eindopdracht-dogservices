@@ -23,7 +23,7 @@ function Home() {
             <p> </p>
             <home>
                 <h1 id="about-us">Over Ons</h1>
-                <p className="colums-3">
+                <p className={styles.colums3}>
                     Hallo, wij zijn <b>Kristel</b> en <b>Peter</b>. Wij zijn een stel en we zijn beide dol op honden.
                     We willen graag helpen bij het bij elkaar brengen van hondenbezitters en honden uitlaters.
                     Registreert u zich aub als hondenbezitter of als uitlater verderop op deze pagina.
@@ -44,23 +44,34 @@ function Home() {
 
             </home>
             <p> </p>
+            {/*<span className={styles.home}>*/}
             <home>
-                <Tile title="Hondenbezitters">
-                    <p>Meld u zich gerust gratis aan zodat uw vrolijke viervoeter regelmatig een frisse neus kan halen en de 'benen' kan strekken.</p>
-                    <Button>
-                        <Link to="/registerowners" style={{ textDecoration: 'none' }} >Registreren Hondenbezitters</Link>
-                    </Button>
-                </Tile>
-                <Tile img={dog} imgDescription="Dog" />
-                <Tile img={dogservicepic} imgDescription="Dog Services" />
-                <Tile title="Honden Uitlaat Services">
-                    <p>Honden uitlaat diensten kunnen zich hier gratis aanmelden om in contact te komen met hondenbezitters.</p>
-                    <Button>
-                        <Link to="/registerservices" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
-                    </Button>
-                </Tile>
+                <span className={styles.great}>
+                    <div className={styles.picture}>
+                        <Tile title="Hondenbezitters">
+                            <p>Meld u zich gerust gratis aan zodat uw vrolijke viervoeter regelmatig een frisse neus kan halen en de 'benen' kan strekken.</p>
+                            <Button>
+                                <Link to="/registerowners" style={{ textDecoration: 'none' }} >Registreren Hondenbezitters</Link>
+                            </Button>
+                        </Tile>
+                     </div>
+                    <div className={styles.picture}>
+                        <Tile img={dog} imgDescription="Dog" />
+                    </div>
+                    <div className={styles.picture}>
+                         <Tile img={dogservicepic} imgDescription="Dog Services" />
+                    </div>
+                    <div className={styles.picture}>
+                       <Tile title="Honden Uitlaat Services">
+                            <p>Honden uitlaat diensten kunnen zich hier gratis aanmelden om in contact te komen met hondenbezitters.</p>
+                            <Button>
+                                <Link to="/registerservices" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
+                            </Button>
+                       </Tile>
+                    </div>
+            </span>
+ {/*</span>*/}
             </home>
-
         </>
     );
 }

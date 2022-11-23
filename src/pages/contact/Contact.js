@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Contact.module.css'
 import contactpic from "../../assets/contactpic.jpg";
 import Tile from "../../components/tile/tile";
+import Button from "../../components/button/button";
 
 const ContactForm = () => {
 
@@ -19,51 +20,57 @@ const ContactForm = () => {
     }
     return (
         <>
+             <span className={styles.contact}>
+                 <span className={styles.great}>
+                    <div className={styles.picture}>
+                        <h1>Contact</h1>
+                        <h2>Neemt u gerust contact met ons op.</h2>
+                        <p>Wij reageren op werkdagen binnen 24 uur. </p>
+                        <Tile img={contactpic} imgDescription="Contact" />
+                    </div>
 
-            <main>
-                <article>
-                    <h3>Neemt u gerust contact met ons op.</h3>
-                    <p>Wij reageren op werkdagen binnen 24 uur. </p>
-                    <Tile img={contactpic} imgDescription="Contact" />
-                </article>
-                <Tile>
+                  <div className={styles.picture}>
+                    <Tile>
                     <form onSubmit={onSubmit}>
-                        <section>
+                        <div>
                             <h4><h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4></h4>
                             <label>
                                 Naam
                             </label>
-                            <input className="inputs" type="text" id="name" required />
-                        </section>
-                        <section>
+                            <input className="inputs" placeholder="Uw naam" type="text" id="name" required />
+                        </div>
+                        <p> </p>
+                        <div>
                             <label htmlFor="email">
                                 Email
                             </label>
-                            <input className="inputs" type="email" id="email" required />
-                        </section>
-                        <section>
+                            <input className="inputs" placeholder="Uw email" type="email" id="email" required />
+                        </div>
+                        <p> </p>
+                        <div>
                             <label htmlFor="phone">
                                 Telefoonnr
                             </label>
-                            <input className="inputs" type="phone" id="phone" required />
-                        </section>
-                        <section>
+                            <input className="inputs" placeholder="Uw telefoonnr" type="phone" id="phone" required />
+                        </div>
+                        <p> </p>
+                        <div>
                             <label htmlFor="message">
                                 Uw bericht:
                             </label>
-                            <textarea className="inputs" id="message" required />
-                        </section>
-                        <section>
-
-                            <button type="submit">
+                            <textarea className="inputs" placeholder="Uw bericht" id="message" required />
+                        </div>
+                        <p> </p>
+                        <div>
+                            <Button className={styles.submit} type="submit">
                                 {formStatus}
-                            </button>
-                        </section>
+                            </Button>
+                        </div>
                     </form>
-                </Tile>
-
-
-            </main>
+                    </Tile>
+                </div>
+                </span>
+            </span>
         </>
     )
 }

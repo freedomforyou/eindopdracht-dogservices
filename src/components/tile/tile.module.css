@@ -5,8 +5,7 @@ img {
 }
 
 section {
-    background-color: aquamarine;
-    /*color: blue;*/
+    background-color: #7fffd4;
     margin: 10px 20px;
     display: flex;
     flex-direction: row;
@@ -14,5 +13,4 @@ section {
     justify-content: normal;
     width: 400px;
     padding: 10px;
-    /*border: 1px solid blue;*/
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useHistory, Link} from 'react-router-dom';
+import { NavLink, Link} from 'react-router-dom';
 
 function Bottomlinks () {
 

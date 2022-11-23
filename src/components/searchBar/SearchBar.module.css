@@ -4,7 +4,7 @@
 
 .searchbar input {
     border-radius: 2px 0 0 2px;
-    border-color: black;
+    border-color: #000000;
     padding: 8px 16px;
     width: 70%;
     outline: none;
@@ -12,10 +12,10 @@
 
 .searchbar button {
     border-radius: 0 2px 2px 0;
-    border-color: black;
+    border-color: #000000;
     padding: 8px 16px;
-    background-color: aqua;
-    color: white;
+    background-color: #7fffd4;
+    color: #0000ff;
     cursor: pointer;
     outline: none;
 }
@@ -23,4 +23,17 @@
 .searchbar input,
 .searchbar button {
     font-family: 'Core Sans G', Arial, sans-serif;
+}
+
+.center {
+
+}
+
+.inputs {
+    width: 93%;
+}
+
+.submit {
+    width: 60%;
+    color: #0000ff;
 }

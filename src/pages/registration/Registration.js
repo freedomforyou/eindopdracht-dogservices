@@ -10,23 +10,32 @@ import dogservicepic from "../../assets/dogservicepic.png";
 function Register () {
     return (
         <>
-            <main>
+            <span className={styles.registration}>
+                <span className={styles.great}>
+                    <div className={styles.picture}>
                 <Tile title="Hondenbezitters">
                     <p>Meld u zich gerust gratis aan zodat uw vrolijke viervoeter regelmatig een frisse neus kan halen en de 'benen' kan strekken.</p>
                     <Button>
                         <Link to="/registerowners" style={{ textDecoration: 'none' }} >Registreren Hondenbezitters</Link>
                     </Button>
                 </Tile>
+                         </div>
+                    <div className={styles.picture}>
                 <Tile img={dog} imgDescription="Dog" />
+                    </div>
+                    <div className={styles.picture}>
                 <Tile img={dogservicepic} imgDescription="Dog Services" />
+                    </div>
+                    <div className={styles.picture}>
                 <Tile title="Honden Uitlaat Services">
                     <p>Honden uitlaat diensten kunnen zich hier gratis aanmelden om in contact te komen met hondenbezitters.</p>
                     <Button>
                         <Link to="/registerservices" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
                     </Button>
                 </Tile>
-            </main>
-
+        </div>
+            </span>
+ </span>
         </>
     );
 }

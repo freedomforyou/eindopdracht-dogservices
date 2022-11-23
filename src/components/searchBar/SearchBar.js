@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import './SearchBar.css';
+import './SearchBar.module.css';
+import styles from "./SearchBar.module.css";
 
 function SearchBar({ setLocationHandler }) {
     const [query, setQuery] = useState('');
 
     function onFormSubmit(e) {
         e.preventDefault();
-        console.log('submitted!');
+        console.log('Locatie verstuurd!');
 
         setLocationHandler(query);
     }
@@ -22,7 +23,7 @@ function SearchBar({ setLocationHandler }) {
                 placeholder="Zoek een stad in Nederland"
             />
             <p>   </p>
-            <button type="submit">
+            <button className={styles.submit} type="submit">
                 Zoek plaats
             </button>
         </form>

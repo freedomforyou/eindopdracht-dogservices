@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import styles from "./WeatherOverview.module.css";
-import venlo from "../../assets/Venlo.png";
+import maasbree from "../../assets/Maasbree.png";
 import Tile from "../../components/tile/tile";
 import Button from "../../components/button/button";
 import {Link} from "react-router-dom";
@@ -12,7 +12,7 @@ function WeatherVenlo () {
 
     async function fetchData() {
         try {
-            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=venlo,nl&appid=${apiKey}&lang=nl&units=metric`);
+            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=maasbree,nl&appid=${apiKey}&lang=nl&units=metric`);
             console.log(result.data);
             setWeatherData(result.data);
         } catch (e) {
@@ -25,18 +25,20 @@ function WeatherVenlo () {
             <span className={styles.test}>
                 <span className={styles.great}>
                     <div className={styles.picturetop} >
-                        <h1>Weersverwachting Venlo</h1>
-                         <Tile img={venlo} imgDescription="Venlo" />
+                        <h1>Weersverwachting Maasbree</h1>
+                         <Tile img={maasbree} imgDescription="Maasbree" />
                             <button className={styles.submit} type="button" onClick={fetchData}>
                                 Wat voor weer wordt het ?
                             </button>
-                         <p>  </p>
+                        <p>  </p>
                             <Button type="button">
                                 <Link to="/weersoverzicht" style={{ textDecoration: 'none' }}>Terug naar overzicht</Link>
                             </Button>
                     </div>
 
                     <div className={styles.picture}>
+
+
                     {Object.keys(weatherData).length > 0 &&
 
                         <>

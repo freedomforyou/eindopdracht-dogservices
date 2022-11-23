@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import styles from "./WeatherOverview.module.css";
-import venlo from "../../assets/Venlo.png";
+import baarlo from "../../assets/Baarlo.png";
 import Tile from "../../components/tile/tile";
-import Button from "../../components/button/button";
 import {Link} from "react-router-dom";
 const apiKey = '9132b59a13a060e8812c4d0186286504';
 
-function WeatherVenlo () {
+function WeatherBaarlo () {
     const [weatherData, setWeatherData] = useState({});
 
     async function fetchData() {
         try {
-            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=venlo,nl&appid=${apiKey}&lang=nl&units=metric`);
+            const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=baarlo,nl&appid=${apiKey}&lang=nl&units=metric`);
             console.log(result.data);
             setWeatherData(result.data);
         } catch (e) {
@@ -25,18 +24,20 @@ function WeatherVenlo () {
             <span className={styles.test}>
                 <span className={styles.great}>
                     <div className={styles.picturetop} >
-                        <h1>Weersverwachting Venlo</h1>
-                         <Tile img={venlo} imgDescription="Venlo" />
+                        <h1>Weersverwachting Baarlo</h1>
+                         <Tile img={baarlo} imgDescription="Baarlo" />
                             <button className={styles.submit} type="button" onClick={fetchData}>
                                 Wat voor weer wordt het ?
                             </button>
-                         <p>  </p>
-                            <Button type="button">
+                        <p>  </p>
+                            <button type="button">
                                 <Link to="/weersoverzicht" style={{ textDecoration: 'none' }}>Terug naar overzicht</Link>
-                            </Button>
+                            </button>
                     </div>
 
                     <div className={styles.picture}>
+
+
                     {Object.keys(weatherData).length > 0 &&
 
                         <>
@@ -62,4 +63,4 @@ function WeatherVenlo () {
     );
 }
 
-export default WeatherVenlo;
+export default WeatherBaarlo;

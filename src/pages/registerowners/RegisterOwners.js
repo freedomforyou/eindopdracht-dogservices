@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import styles from './RegisterOwners.module.css'
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
-import {Link} from "react-router-dom";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -35,19 +34,17 @@ function RegistrationOwners () {
 
     return (
         <>
-            <main>
-                <section>
-                    <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
+             <span className={styles.test}>
+                 <span className={styles.great}>
+                <div className={styles.picture}>
                     <h1>Registratie Hondenbezitters</h1>
                     <h4>U kunt zich gratis en vrijblijvend inschrijven. Uw gegevens zijn veilig en worden niet met derden gedeeld.</h4>
                     <p>U kunt zich ten alle tijde weer uitschrijven. Uw gegevens worden dan definitief verwijderd.</p>
-                </section>
-
-            </main>
-            <main>
-                {/*<section>*/}
+                </div>
+                <div className={styles.picture}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <section>
+                        <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
                         <h3>Vul aub alle velden in.</h3>
                     </section>
                     <section>
@@ -173,12 +170,13 @@ function RegistrationOwners () {
                         <label htmlFor="agree-field">Ik ga akkoord met de voorwaarden</label>
                     </section>
 
-                    <button className="submit" type="submit">
+                    <button className={styles.submit} type="submit">
                         Verzenden
                     </button>
                 </form>
-                {/*</section>*/}
-            </main>
+                </div>
+            </span>
+                 </span>
         </>
 
     );

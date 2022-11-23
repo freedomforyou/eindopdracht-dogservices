@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Button from "../button/button";
+import styles from "../../components/topmenu/TopMenu.css";
 
 
 function TopMenu ({ isAuth, toggleAuth }) {
@@ -14,7 +15,6 @@ function TopMenu ({ isAuth, toggleAuth }) {
 
     return (
         <top>
-            {/*<div>*/}
             <div className="nav-container">
                 <ul>
 
@@ -87,16 +87,16 @@ function TopMenu ({ isAuth, toggleAuth }) {
                             </li>
 
                             <li>
-                                <Button className="submit" type="button" onClick={signOut}>
+                                <Button className={styles.submit} type="button" onClick={signOut}>
                                     Uitloggen
                                 </Button>
                             </li>
                         </>
                         :
                         <li>
-                            <Button className="submit" type="button" >
+                            <Button  className={styles.submit} type="button" >
                                 <NavLink to="/login">
-                                    Login
+                                    Inloggen
                                 </NavLink>
                             </Button>
                         </li>

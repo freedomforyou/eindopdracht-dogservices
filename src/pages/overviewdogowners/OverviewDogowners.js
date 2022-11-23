@@ -1,39 +1,45 @@
 import React from 'react';
 import styles from './OverviewDogowners.module.css'
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import dogowners from '../../data/dogowners.json';
-import Button from "../../components/button/button";
-import chantaljansen from "../../assets/1.jpg";
-import Tileoverview from "../../components/tile/tileoverview";
 
 function OverviewDogowners() {
+
     return (
         <>
-            <main>
+            <span className={styles.test}>
                 <h1>Overzicht van ingeschreven Honden bezitters</h1>
-            </main>
-            <main>
                 <h3>Momenteel zijn er {dogowners.length} Hondenbezitters bij ons ingeschreven.</h3>
-
-                <ul>
+            </span>
+            <span className={styles.test}>
+                <div>
+                <ul className={styles.overview}>
                     {dogowners.map((dogowner) => {
 
                         return <li key={dogowner.id}>
-                            <h4>{dogowner.id}</h4>
-                            <Tileoverview img={dogowner.picture} imgDescription={dogowner.name} />
-                            <h4>{dogowner.name}</h4>
-                            <h4>Locatie: {dogowner.location}</h4>
-                            <h4>Hondenras:</h4>
-                            <p>{dogowner.dograce}</p>
-                            <Button>
-                                <Link to={`dogowner/${dogowner.id}`}>
-                                    {dogowner.name}
-                                </Link>
-                            </Button>
+                            <span className={styles.great}>
+                                <div className={styles.picture}>
+                                    <h3>{dogowner.id}. {dogowner.name}</h3>
+                                    <h4>Locatie: {dogowner.location}</h4>
+                                    <h4>Hondenras: {dogowner.dograce} </h4>
+                                    <button className={styles.submit} type="submit">
+                                        <Link to={`dogowner/${dogowner.id}`}>
+                                            {dogowner.name}
+                                        </Link>
+                                    </button>
+                                     </div>
+
+                                     <div className={styles.picture}>
+                                         <img src={dogowner.piccode} alt={dogowner.name}/>
+                                         <h3>{dogowner.name}</h3>
+                                    </div>
+
+                            </span>
                         </li>
                     })}
                 </ul>
-            </main>
+                    </div>
+            </span>
         </>
     );
 }

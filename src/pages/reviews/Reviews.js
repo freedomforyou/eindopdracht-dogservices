@@ -7,32 +7,40 @@ import Button from "../../components/button/button";
 function ReviewsPage() {
     return (
         <>
-            <main>
+            <span className={styles.test}>
                 <div>
                     <h1>Reviews van aangesloten Honden Uitlaatservices</h1>
                     <p className="colums-3">Om de details en contactgegevens van de uitlaatservice te zien, zult u even moeten inloggen. Heeft u nog geen account, registreer dan aub even gratis.</p>
                 </div>
-                <ul>
+                 </span>
+            <span className={styles.test}>
+                <ul className={styles.overview}>
                     {dogservices.map((dogservice) => {
                         return <li key={dogservice.id}>
-                            <div>
-                                <h4>{dogservice.id}.</h4>
-                                <h3>{dogservice.title}</h3>
-                                <h4>Locatie: {dogservice.location}</h4>
-                                <h5>Algemene indruk:</h5>
-                                <p>{dogservice.general}</p>
-                                <Button>
-                                    <Link to={`dogservice/${dogservice.id}`}>
-                                        {dogservice.title}
-                                    </Link>
-                                </Button>
-                            </div>
+                            <span className={styles.great}>
+                                <div className={styles.picture}>
+                                    <h3>{dogservice.id}. {dogservice.title}</h3>
+                                    <h4>Locatie: {dogservice.location}</h4>
+                                    <h4>Algemene indruk:</h4>
+                                    <p>{dogservice.general}</p>
+                                    <p> </p>
+                                    <Button>
+                                        <Link to={`dogservice/${dogservice.id}`}>
+                                            {dogservice.title}
+                                        </Link>
+                                    </Button>
+                                </div>
+                                 <div className={styles.picture}>
+                                         <img src={dogservice.piccode} alt={dogservice.serviceowner}/>
+                                         <h3>{dogservice.serviceowner}</h3>
+                                </div>
+                            </span>
                         </li>
 
                     })}
 
                 </ul>
-            </main>
+            </span>
         </>
     );
 }

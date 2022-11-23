@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './Dogservices.module.css'
 import dogservices from '../../data/dogservices.json';
 import { useParams, Link } from 'react-router-dom';
-import Tile from "../../components/tile/tile";
-import chantaljansen from "../../assets/1.jpg";
 import Button from "../../components/button/button";
 
 function DogserviceDetails () {
@@ -15,33 +13,28 @@ function DogserviceDetails () {
 
     return (
         <>
-            <main>
-                <h2>Naam Uitlaat Service:</h2>
-                <h1>"{currentDogservice.title}"</h1>
-            </main>
-            <main>
-                <section>
-                    <Tile>
+             <span className={styles.test}>
+                <span className={styles.great}>
+                    <div className={styles.picture}>
+                        <h3>Naam Uitlaat Service: {currentDogservice.title}</h3>
                         <h4>Locatie: {currentDogservice.location}</h4>
                         <h4>Ingeschreven sinds: {currentDogservice.date}</h4>
-                        <p>Korte beschrijving: "{currentDogservice.title}"</p>
+                        <p>Korte beschrijving: {currentDogservice.content}</p>
                         <p>Eigenaar: {currentDogservice.serviceowner}</p>
                         <p>Adres: {currentDogservice.address}</p>
-                        <p>Algemene beoordeling:</p>
+                        <p>Telefoon: {currentDogservice.phonenumber}</p>
+                        <h4>Algemene beoordeling: </h4>
                         <p>{currentDogservice.general}</p>
-                    </Tile>
-                </section>
-                <section>
-                    <Tile img={chantaljansen} imgDescription={currentDogservice.serviceowner} />
-                    <Tile name={currentDogservice.serviceowner}>
-                    </Tile>
-                </section>
-                <section>
-                    <Button>
-                        <Link to="/OverviewDogservices" style={{ textDecoration: 'none' }} >Terug naar Overzicht Uitlaatdiensten</Link>
-                    </Button>
-                </section>
-            </main>
+                    </div>
+                    <div className={styles.picture}>
+                        <img src={currentDogservice.piccode} alt={currentDogservice.serviceowner}/>
+                        <h3>{currentDogservice.serviceowner}</h3>
+                        <Button>
+                            <Link to="/OverviewDogservices" style={{ textDecoration: 'none' }} >Terug naar Overzicht Uitlaatdiensten</Link>
+                        </Button>
+                    </div>
+                 </span>
+            </span>
         </>
     );
 }

@@ -21,6 +21,10 @@ import OverviewDogservices from "./pages/overviewdogservices/OverviewDogservices
 import OverviewDogowners from "./pages/overviewdogowners/OverviewDogowners";
 import TopMenu from "./components/topmenu/TopMenu";
 import WeatherVenlo from "./pages/weatheroverview/WeatherVenlo";
+import WeatherTegelen from "./pages/weatheroverview/WeatherTegelen";
+import WeatherBaarlo from "./pages/weatheroverview/WeatherBaarlo";
+import WeatherBlerick from "./pages/weatheroverview/WeatherBlerick";
+import WeatherMaasbree from "./pages/weatheroverview/WeatherMaasbree";
 
 function PrivateRoute({ children, isAuth, ...rest}) {
     return (
@@ -91,6 +95,22 @@ function App() {
 
                 <Route path="/weervenlo">
                     <WeatherVenlo />
+                </Route>
+
+                <Route path="/weertegelen">
+                    <WeatherTegelen />
+                </Route>
+
+                <Route path="/weerbaarlo">
+                    <WeatherBaarlo />
+                </Route>
+
+                <Route path="/weermaasbree">
+                    <WeatherMaasbree />
+                </Route>
+
+                <Route path="/weerblerick">
+                    <WeatherBlerick />
                 </Route>
 
                 <Route path="/adverteerders">

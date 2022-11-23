@@ -28,35 +28,46 @@ te bekijken.
 
 ## Webpaginas
 
-De website heeft x paginas:
+De website heeft 31 paginas:
 
-1. Home pagina (`/`)
-2. Login pagina (`/login`)
-3. Blog Overzicht pagina (`/blogposts`)
-4. Blogpost pagina (`/blog/:blogId`)
+1. Home pagina					(`/`)
+2. Reviews					(`/reviews`)
+3. Registratie					(`/registration`)
+4. Registratie Hondenbezitters		(`/registerowners`)
+5. Registratie Hondenuitlaatdiensten	(`/registerservices`)
+6. Weersverwachting				(`/weersoverzicht`)
+7. Weersverwachting Venlo			(`/weervenlo`)
+8. Weersverwachting Tegelen		(`/weertegelen`)
+9. Weersverwachting Baarlo			(`/weerbaarlo`)
+10. Weersverwachting Maasbree		(`/weermaasbree`)
+11. Weersverwachting Blerick		(`/weerblerick`)
+12. Adverteerders				(`/adverteerders`)
+13. Contact					(`/contact`)
+14. Overzicht Hondenuitlaatdiensten	(`/OverviewDogservices`)
+15. Hondenuitlaatdienst 1			(`/dogservice/1`)
+16. Hondenuitlaatdienst 2			(`/dogservice/2`)
+17. Hondenuitlaatdienst 3			(`/dogservice/3`)
+18. Hondenuitlaatdienst 4			(`/dogservice/4`)
+19. Hondenuitlaatdienst 5			(`/dogservice/5`)
+20. Hondenuitlaatdienst 6			(`/dogservice/6`)
+21. Overzicht Hondenbezitters		(`/OverviewDogowners`)
+22. Hondenbezitter 1				(`/dogowner/1`)
+23. Hondenbezitter 2				(`/dogowner/2`)
+24. Hondenbezitter 3				(`/dogowner/3`)
+25. Hondenbezitter 4				(`/dogowner/4`)
+26. Hondenbezitter 5				(`/dogowner/5`)
+27. Hondenbezitter 6				(`/dogowner/6`)
+28. Algemene voorwaarden			(`/Requirements`)
+29. Disclaimer					(`/disclaimer`)
+30. Privacy Policy				(`/privacy`)
+31. Uitschrijven				(`/Unsubscribe`)
+
+
+## JSON Data Files
 
 Er zijn 2 JSON data files :
 
 1. dogowners.json
 2. dogservices.json
 
-
-
-
-Zoals je hebt gezien is er in de `App.js` een stukje state aanwezig die registreert of iemand ingelogd is of niet. Deze
-informatie ga je gebruiken om elementen conditioneel weer te geven, maar ook om jouw routes te beveiligen.
-
-* Zorg ervoor dat wanneer een gebruiker op de "Inlog"-knop op de Login pagina klikt, de `isAuthenticated` state
-  van `true` naar `false` getoggled wordt. 
-
-* Je zult de waarde en setter-functie (callback prop) dus vanaf `App.js` moeten
-  doorgeven aan de pagina of component die deze waardes nodig heeft.
-
-- Als een bezoeker *wel* ingelogd is, moet er een "uitloggen"-knop in de navigatie staan. Als je daarop klikt wordt de
-  gebruiker direct uitgelogd en naar de home-pagina gestuurd.
-
-- Maak voor de beveiligde routes een apart `<PrivateRoute>` component voor die je kunt hergebruiken!
-- Voeg een React hook form toe aan de login pagina waar de gebruiker ook daadwerkelijk gegevens kan invullen. Je kunt
-  dan een `users.json` bestand maken met gebruikers erin, zodat je iemand daadwerkelijk kunt laten "inloggen" met een
-  bestaand account.
 

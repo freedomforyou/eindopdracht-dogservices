@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import styles from './RegisterServices.module.css'
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
-import {Link} from "react-router-dom";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -35,21 +34,21 @@ function RegisterservicesPage () {
 
     return (
         <>
-            <main>
-                <section>
-                    <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
+            <span className={styles.test}>
+                <span className={styles.great}>
+                <div className={styles.picture}>
                     <h1>Registratie Hondenuitlaatdiensten</h1>
                     <h4>U kunt zich gratis en vrijblijvend inschrijven. Uw gegevens zijn veilig en worden niet met derden gedeeld.</h4>
                     <p>U kunt zich ten alle tijde weer uitschrijven. Uw gegevens worden dan definitief verwijderd.</p>
-                </section>
+                </div>
 
-            </main>
-            <main>
-                {/*<section>*/}
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <section>
-                        <h3>Vul aub alle velden in.</h3>
-                    </section>
+                    <div className={styles.picture}>
+                         <form onSubmit={handleSubmit(onSubmit)}>
+                             <section>
+                                 <h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4>
+                                <h3>Vul aub alle velden in.</h3>
+                             </section>
+
                     <section>
                         <label htmlFor="firstName">Voornaam  </label>
                         <input className="inputs" placeholder="Uw voornaam" {...register("firstName")} />
@@ -80,7 +79,6 @@ function RegisterservicesPage () {
                     </section>
                     <section>
                         <label htmlFor="yearsActive">Jaren actief</label>
-                        {/*<input className="inputs" placeholder="Jaren actief" {...register("yearsActive")} />*/}
                         <select>
                             <option selected value="0-2 jaar">0-2 jaar</option>
                             <option value="2-4 jaar">2-4 jaar</option>
@@ -105,10 +103,10 @@ function RegisterservicesPage () {
                                {...register("email")}
                         />
                     </section>
-                    <div style={{ color: "red" }}>
+                    <section style={{ color: "red" }}>
                         {Object.keys(errors).length > 0 &&
                             "There are errors, check your console."}
-                    </div>
+                    </section>
 
                     <section>
 
@@ -155,8 +153,9 @@ function RegisterservicesPage () {
                         Verzenden
                     </button>
                 </form>
-                {/*</section>*/}
-            </main>
+                    </div>
+            </span>
+                </span>
         </>
 
     );
