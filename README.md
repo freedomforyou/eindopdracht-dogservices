@@ -28,7 +28,7 @@ te bekijken.
 
 ## Webpaginas
 
-De website heeft 31 paginas:
+De website heeft 32 paginas:
 
 1. Home pagina					(`/`)
 2. Reviews					(`/reviews`)
@@ -61,6 +61,7 @@ De website heeft 31 paginas:
 29. Disclaimer					(`/disclaimer`)
 30. Privacy Policy				(`/privacy`)
 31. Uitschrijven				(`/Unsubscribe`)
+32. Inloggen				(`/login`)
 
 
 ## JSON Data Files

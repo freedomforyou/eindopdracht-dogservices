@@ -87,7 +87,7 @@ function TopMenu ({ isAuth, toggleAuth }) {
                             </li>
 
                             <li>
-                                <Button className={styles.submit} type="button" onClick={signOut}>
+                                <Button className={styles.submit} type="button" clickHandler={signOut}>
                                     Uitloggen
                                 </Button>
                             </li>
