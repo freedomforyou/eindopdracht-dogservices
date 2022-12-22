@@ -43,6 +43,17 @@ function Bottomlinks () {
                             Contact
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/signupserver">
+                            Signup Heroku
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/signinserver">
+                            Signin Heroku
+                        </NavLink>
+                    </li>
                 </ul>
             </footer>
 

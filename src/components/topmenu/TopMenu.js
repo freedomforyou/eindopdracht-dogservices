@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Button from "../button/button";
+import { AuthContext } from '../../context/AuthContext';
 import styles from "../../components/topmenu/TopMenu.css";
 
 
@@ -66,7 +67,6 @@ function TopMenu ({ isAuth, toggleAuth }) {
                         </Button>
                     </li>
 
-
                     {isAuth === true
                         ?  <> <Redirect to="/OverviewDogservices" />
 
@@ -87,6 +87,14 @@ function TopMenu ({ isAuth, toggleAuth }) {
                             </li>
 
                             <li>
+                                <Button type="button">
+                                    <NavLink to="/profile">
+                                        Profile
+                                    </NavLink>
+                                </Button>
+                            </li>
+
+                            <li>
                                 <Button className={styles.submit} type="button" clickHandler={signOut}>
                                     Uitloggen
                                 </Button>
@@ -95,7 +103,7 @@ function TopMenu ({ isAuth, toggleAuth }) {
                         :
                         <li>
                             <Button  className={styles.submit} type="button" >
-                                <NavLink to="/login">
+                                <NavLink to="/signin">
                                     Inloggen
                                 </NavLink>
                             </Button>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,  useContext } from 'react';
 import {Route, Switch, Redirect, Link} from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/Home';
-import Login from './pages/login/Login';
 import Reviews from './pages/reviews/Reviews'
 import Contact from './pages/contact/Contact'
 import Bottomlinks from "./components/bottomlinks/Bottomlinks";
@@ -25,6 +24,13 @@ import WeatherTegelen from "./pages/weatheroverview/WeatherTegelen";
 import WeatherBaarlo from "./pages/weatheroverview/WeatherBaarlo";
 import WeatherBlerick from "./pages/weatheroverview/WeatherBlerick";
 import WeatherMaasbree from "./pages/weatheroverview/WeatherMaasbree";
+import SignUp from "./pages/registerowners/SignUp";
+import SignUpServices from "./pages/registerservices/SignUpServices";
+import SignUpServer from "./pages/registerowners/SignUpServer";
+import SignInServer from "./pages/login/SignInServer";
+import SignIn from "./pages/login/SignIn";
+import Profile from "./pages/profile/Profile";
+import { AuthContext } from './context/AuthContext';
 
 function PrivateRoute({ children, isAuth, ...rest}) {
     return (
@@ -36,11 +42,13 @@ function PrivateRoute({ children, isAuth, ...rest}) {
 
 function App() {
     const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
+    const { isAuth } = useContext(AuthContext);
 
     return (
+        <>
         <div>
             <TopMenu isAuth={isAuthenticated} toggleAuth={toggleIsAuthenticated} />
-            <Switch>
+                <Switch>
                 <Route exact path="/">
                     <Home />
                 </Route>
@@ -63,10 +71,6 @@ function App() {
 
                 <Route path="/dogowners">
                     <DogownersPage />
-                </Route>
-
-                <Route path="/login">
-                    <Login toggleAuth={toggleIsAuthenticated} />
                 </Route>
 
                 <Route path="/Requirements">
@@ -117,6 +121,30 @@ function App() {
                     <AdvertisersPage />
                 </Route>
 
+                <Route path="/signup">
+                    <SignUp />
+                </Route>
+
+                    <Route path="/signupservices">
+                        <SignUpServices />
+                    </Route>
+
+                    <Route path="/signinserver">
+                        <SignInServer />
+                    </Route>
+
+                    <Route path="/signupserver">
+                        <SignUpServer />
+                    </Route>
+
+                <Route path="/signin">
+                    <SignIn toggleAuth={toggleIsAuthenticated} />
+                </Route>
+
+                    <Route path="/profile">
+                        {isAuth ? <Profile /> : <Redirect to="/" />}
+                    </Route>
+
                 <PrivateRoute exact path="/OverviewDogservices" isAuth={isAuthenticated}>
                     <OverviewDogservices />
                 </PrivateRoute>
@@ -137,6 +165,7 @@ function App() {
 
             <Bottomlinks/>
         </div>
+        </>
     );
 }
 

@@ -23,7 +23,7 @@ function RegistrationOwners () {
     } = useForm();
     const onSubmit = async (data) => {
         await sleep(2000);
-        if (data.username === "bill") {
+        if (data.username === "Piet") {
             alert(JSON.stringify(data));
         } else {
             alert("Er is een fout opgetreden");
@@ -62,14 +62,6 @@ function RegistrationOwners () {
                     <section>
                         <label htmlFor="phoneNumber">Telefoonnr </label>
                         <input className="inputs" placeholder="Uw telefoonnr" {...register("phoneNumber")} />
-                    </section>
-                    <section className="password">
-                        <label className="form__label" htmlFor="password">Wachtwoord  </label>
-                        <input className="inputs" type="password" id="password" placeholder="Wachtwoord"/>
-                    </section>
-                    <section className="confirm-password">
-                        <label className="form__label" htmlFor="confirmPassword">Bevestig wachtwoord  </label>
-                        <input className="inputs" type="password" id="confirmPassword" placeholder="Bevestig wachtwoord"/>
                     </section>
                     <section>
                         <label htmlFor="dogRace">Uw hondenras  </label>

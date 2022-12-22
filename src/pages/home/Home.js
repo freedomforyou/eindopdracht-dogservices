@@ -32,16 +32,18 @@ function Home() {
             </home>
             <p> </p>
             <home>
-                <Tile title="Kristel Jansen-Wilms">
-                    <p>31 jaar. Moeder van 2 kinderen. Woon in Venlo. Van beroep lerares op een basisschool. Hobbies : kinderen, honden, tuinieren en lezen.</p>
-                </Tile>
-                <Tile img={kristel} imgDescription="Kristel" />
-
-                <Tile img={peter} imgDescription="Peter Jansen" />
-                <Tile title="Peter Jansen">
-                    <p>34 jaar. Vader van 2 kinderen. Woon in Venlo. Van beroep accountant. Hobbies : kinderen, honden, klussen en gitaarspelen.</p>
-                </Tile>
-
+                <div className={styles.picture}>
+                    <Tile title="Kristel Jansen-Wilms">
+                        <p>31 jaar. Moeder van 2 kinderen. Woon in Venlo. Van beroep lerares op een basisschool. Hobbies : kinderen, honden, tuinieren en lezen.</p>
+                    </Tile>
+                    <Tile img={kristel} imgDescription="Kristel" />
+                </div>
+                <div className={styles.picture}>
+                    <Tile img={peter} imgDescription="Peter Jansen" />
+                    <Tile title="Peter Jansen">
+                        <p>34 jaar. Vader van 2 kinderen. Woon in Venlo. Van beroep accountant. Hobbies : kinderen, honden, klussen en gitaarspelen.</p>
+                    </Tile>
+                </div>
             </home>
             <p> </p>
             {/*<span className={styles.home}>*/}
