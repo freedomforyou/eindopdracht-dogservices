@@ -2,15 +2,16 @@
 
 ## Inleiding
 
-Je gaat een bloggingplatform bouwen waarbij sommige url's niet toegankelijk zijn voor gebruikers die niet zijn ingelogd.
-Je gaat ook concepten als doorlinken, dynamische parameters en een nep-login toepassen. De "login"-funtionaliteit is
-voor deze opdracht met opzet versimpelt.
+Deze website heeft als doel om hondenbezitters en hondenuitlaat diensten bij elkaar te brengen.
+Sommige url's zijn pas toegankelijk nadat de gebruiker heeft ingelogd.
+Uiteraard moet deze gebruiker dan eerst geregistreerd zijn als gebruiker.
 
 ![screenshot](src/assets/screenshot.png)
 
 ## Applicatie starten
 
-Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de `node_modules` door het volgende
+Je kunt dit project clonen naar jouw locale machine.
+Vervolgens zul je dan de nodige modules moeten installeren door het volgende
 commando in de terminal te runnen:
 
 ```
