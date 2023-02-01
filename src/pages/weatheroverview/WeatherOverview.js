@@ -26,7 +26,8 @@ function WeatherOverview() {
                  <span className={styles.great}>
                           <ul>
                         <li>
-                             <h1>Weersverwachting in Venlo en omgeving</h1>
+                             <h2>Weersverwachting</h2>
+                            <h3>Voor Venlo en omliggende dorpen</h3>
                             <h3>Klik op de button.</h3>
                         <Button type="button">
                             <Link to="/weervenlo" style={{ textDecoration: 'none' }}>Venlo</Link>
@@ -43,6 +44,26 @@ function WeatherOverview() {
                             <Button type="button">
                                 <Link to="/weerblerick" style={{ textDecoration: 'none' }}>Blerick</Link>
                             </Button>
+                        </li>
+                    </ul>
+                </span>
+
+            </span>
+
+            <span className={styles.test}>
+                 <span className={styles.great}>
+                          <ul>
+                        <li>
+                             <h2>Waar schijnt de zon ? Waar is het droog?</h2>
+                            <h3>(omgeving Noord-Limburg)</h3>
+                            <h3>Klik op de button.</h3>
+                        <Button type="button">
+                            <Link to="/zon" style={{ textDecoration: 'none' }}>Waar schijnt de zon?</Link>
+                        </Button>
+                        <Button type="button">
+                            <Link to="/droog" style={{ textDecoration: 'none' }}>Waar is het droog?</Link>
+                        </Button>
+
                         </li>
                     </ul>
                 </span>

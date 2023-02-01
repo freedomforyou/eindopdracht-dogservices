@@ -1,5 +1,5 @@
 import React, { useState,  useContext } from 'react';
-import {Route, Switch, Redirect, Link} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/Home';
 import Reviews from './pages/reviews/Reviews'
@@ -24,11 +24,11 @@ import WeatherTegelen from "./pages/weatheroverview/WeatherTegelen";
 import WeatherBaarlo from "./pages/weatheroverview/WeatherBaarlo";
 import WeatherBlerick from "./pages/weatheroverview/WeatherBlerick";
 import WeatherMaasbree from "./pages/weatheroverview/WeatherMaasbree";
-import SignUp from "./pages/registerowners/SignUp";
+import Sun from "./pages/weatheroverview/Sun";
+import Dry from "./pages/weatheroverview/Dry";
 import SignUpServices from "./pages/registerservices/SignUpServices";
 import SignUpServer from "./pages/registerowners/SignUpServer";
 import SignInServer from "./pages/login/SignInServer";
-import SignIn from "./pages/login/SignIn";
 import Profile from "./pages/profile/Profile";
 import { AuthContext } from './context/AuthContext';
 
@@ -121,10 +121,6 @@ function App() {
                     <AdvertisersPage />
                 </Route>
 
-                <Route path="/signup">
-                    <SignUp />
-                </Route>
-
                     <Route path="/signupservices">
                         <SignUpServices />
                     </Route>
@@ -137,13 +133,18 @@ function App() {
                         <SignUpServer />
                     </Route>
 
-                <Route path="/signin">
-                    <SignIn toggleAuth={toggleIsAuthenticated} />
-                </Route>
+                    <Route path="/zon">
+                        <Sun />
+                    </Route>
+
+                    <Route path="/droog">
+                        <Dry />
+                    </Route>
 
                     <Route path="/profile">
                         {isAuth ? <Profile /> : <Redirect to="/" />}
                     </Route>
+
 
                 <PrivateRoute exact path="/OverviewDogservices" isAuth={isAuthenticated}>
                     <OverviewDogservices />

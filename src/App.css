@@ -1,6 +1,6 @@
 
 nav {
-    margin: 0px 16px;
+    margin: 0 16px;
     color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -9,17 +9,17 @@ nav {
     padding: 12px;
 }
 
-top {
-    background-color: transparent;
-    color: #0000ff;
-    margin: 10px 16px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 1100px;
-    padding: 10px;
-}
+/*top {*/
+/*    background-color: transparent;*/
+/*    color: #0000ff;*/
+/*    margin: 10px 16px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: center;*/
+/*    width: 1100px;*/
+/*    padding: 10px;*/
+/*}*/
 
 nav ul {
     list-style-type: none;
@@ -30,7 +30,6 @@ nav ul {
     flex-basis: 300px;
     flex-grow: 0;
     flex-shrink: 0;
-
 }
 
 .nav-container {

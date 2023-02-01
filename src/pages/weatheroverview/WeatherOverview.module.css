@@ -41,7 +41,7 @@
     margin: 10px 16px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     width: 400px;
     /*border: 1px solid blue;*/
     padding: 20px;

@@ -7,7 +7,7 @@ import Tile from "../../components/tile/tile";
 import loginpic from "../../assets/login.jpg";
 
 function SignInServer() {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, toggleError] = useState(false);
     const { login } = useContext(AuthContext);
@@ -18,13 +18,13 @@ function SignInServer() {
 
         try {
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
-                email: email,
+                username: username,
                 password: password,
             });
             console.log(result.data);
 
             // JWT token aan de login-functie van de context meegegeven
-            login(result.data.accessToken);
+            // login(result.data.accessToken);
 
         } catch(e) {
             console.error(e);
@@ -43,16 +43,16 @@ function SignInServer() {
                     <p>Vul aub de inloggegevens in.</p>
 
             <form onSubmit={handleSubmit}>
-                <label htmlFor="email-field">
-                    Emailadres:
+                <label htmlFor="username-field">
+                    Username:
                      <p> </p>
                     <input
                         className="inputs"
-                        type="email"
-                        id="email-field"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        type="username"
+                        id="username-field"
+                        name="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                     />
                 </label>
                 <p> </p>
@@ -68,7 +68,7 @@ function SignInServer() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
-                {error && <p className="error">Combinatie van emailadres en wachtwoord is onjuist</p>}
+                {error && <p className="error">Combinatie van username en wachtwoord is onjuist</p>}
                 <p> </p>
                 <button
                     type="submit"

@@ -33,7 +33,7 @@ const ContactForm = () => {
                     <Tile>
                     <form onSubmit={onSubmit}>
                         <div>
-                            <h4><h4>Opmerking: de invulvelden zijn voor de show. Ik moet nog beginnen met de backend training het komende half jaar.</h4></h4>
+                            <h4><h4>Opmerking: dit werkt nog niet.</h4></h4>
                             <label>
                                 Naam
                             </label>
