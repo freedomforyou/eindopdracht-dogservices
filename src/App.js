@@ -90,7 +90,7 @@ function App() {
                 </Route>
 
                 <Route path="/registerservices">
-                    <RegistrationServicesPage />
+                    <SignUpServer />
                 </Route>
 
                 <Route path="/Unsubscribe">

@@ -30,7 +30,7 @@ function Register () {
                 <Tile title="Honden Uitlaat Services">
                     <p>Honden uitlaat diensten kunnen zich hier gratis aanmelden om in contact te komen met hondenbezitters.</p>
                     <Button>
-                        <Link to="/signupservices" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
+                        <Link to="/signupserver" style={{ textDecoration: 'none' }}> Registreren Hondenuitlaters </Link>
                     </Button>
                 </Tile>
         </div>

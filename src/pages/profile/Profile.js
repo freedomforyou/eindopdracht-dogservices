@@ -6,7 +6,6 @@ import styles from "./Profile.module.css";
 import Tile from "../../components/tile/tile";
 import profilepic from "../../assets/profilepic.jpg";
 
-
 function Profile() {
     const [profileData, setProfileData] = useState({});
     const { user } = useContext(AuthContext);
@@ -22,16 +21,15 @@ function Profile() {
 
         async function fetchProfileData() {
             // Token wordt uit de Local Storage gehaald als bewijs van authorisatie
-            const token = localStorage.getItem('token');
+            const [token] = localStorage.getItem('token');
 
             try {
-                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
-                    email: email,
-                    password: password,
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user/', {
                     username: username,
-                    role: ["user"]
+                    email: email,
                 });
-                console.log(result)
+                console.log(result.data);
+
                 setProfileData(result.data);
                 // JWT token aan de login-functie van de context meegegeven
                 login(result.data.accessToken);

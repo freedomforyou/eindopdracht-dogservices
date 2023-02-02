@@ -37,7 +37,7 @@ function SignUpServer() {
         }
         toggleLoading(false);
     }
-    return (<><span className={styles.great}><span className={styles.picture}><Tile img={profilepic} imgDescription="Profilepicture" /></span><span className={styles.picture}><div className={styles.picture}><h1>Registratie Hondenbezitters Heroku</h1><h4>U kunt zich gratis en vrijblijvend inschrijven. Uw gegevens zijn veilig en worden niet met derden gedeeld.</h4><p>U kunt zich ten alle tijde weer uitschrijven. Uw gegevens worden dan definitief verwijderd.</p></div><form onSubmit={handleSubmit}><section><label htmlFor="email-field">
+    return (<><span className={styles.great}><span className={styles.picture}><Tile img={profilepic} imgDescription="Profilepicture" /></span><span className={styles.picture}><div className={styles.picture}><h1>Registratie Hondenbezitters Heroku</h1><h4>U kunt zich gratis en vrijblijvend inschrijven. Uw gegevens zijn veilig en worden niet met derden gedeeld.</h4></div><form onSubmit={handleSubmit}><section><label htmlFor="email-field">
 Emailadres:<input
             className="inputs"
             type="email"
@@ -74,7 +74,12 @@ Role:<input
                 className="form-button"
                 disabled={loading}>
 Registreren</button><p>Door te verzenden gaat u akkoord met de <Link to="/Requirements">Alg. Voorwaarden</Link> en <Link to="/privacy">Privacy Policy</Link></p>
-    </form><p>Heb je al een account? Je kunt je <Link to="/signinserver">hier</Link> inloggen.</p></span></span></>
+             <p>U kunt zich ten alle tijde weer uitschrijven. Uw gegevens worden dan definitief verwijderd.</p>
+    </form><p>Heb je al een account? Je kunt je <Link to="/signinserver">hier</Link> inloggen.</p>
+
+    </span>
+    </span>
+    </>
     );
 }
 export default SignUpServer;

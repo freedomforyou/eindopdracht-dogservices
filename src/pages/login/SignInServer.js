@@ -26,8 +26,10 @@ function SignInServer() {
 
             // JWT token aan de login-functie van de context meegegeven
             login(result.data.accessToken);
-// Na Inloggen wordt er naar de profile-pagina doorgestuurd.
+
+            // Na Inloggen wordt er naar de profile-pagina doorgestuurd.
             history.push('/profile');
+
         } catch(e) {
             console.error(e);
             toggleError(true);
