@@ -103,7 +103,7 @@ function TopMenu ({ isAuth, toggleAuth }) {
                         :
                         <li>
                             <Button  className={styles.submit} type="button" >
-                                <NavLink to="/signin">
+                                <NavLink to="/signinserver">
                                     Inloggen
                                 </NavLink>
                             </Button>
