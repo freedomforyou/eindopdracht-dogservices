@@ -133,6 +133,10 @@ function App() {
                         <SignUpServer />
                     </Route>
 
+                    <Route path="/profile">
+                        <Profile />
+                    </Route>
+
                     <Route path="/zon">
                         <Sun />
                     </Route>
@@ -140,11 +144,6 @@ function App() {
                     <Route path="/droog">
                         <Dry />
                     </Route>
-
-                    <Route path="/profile">
-                        {isAuth ? <Profile /> : <Redirect to="/" />}
-                    </Route>
-
 
                 <PrivateRoute exact path="/OverviewDogservices" isAuth={isAuthenticated}>
                     <OverviewDogservices />

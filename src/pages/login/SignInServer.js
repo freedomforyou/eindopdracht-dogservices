@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 import styles from "../registration/Registration.module.css";
@@ -11,6 +11,7 @@ function SignInServer() {
     const [password, setPassword] = useState('');
     const [error, toggleError] = useState(false);
     const { login } = useContext(AuthContext);
+    const history = useHistory();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -24,8 +25,9 @@ function SignInServer() {
             console.log(result.data);
 
             // JWT token aan de login-functie van de context meegegeven
-            // login(result.data.accessToken);
-
+            login(result.data.accessToken);
+// Na Inloggen wordt er naar de profile-pagina doorgestuurd.
+            history.push('/profile');
         } catch(e) {
             console.error(e);
             toggleError(true);
@@ -78,7 +80,7 @@ function SignInServer() {
                 </button>
             </form>
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan aub eerst.</p>
+            <p>Heb je nog geen account? <Link to="/signupserver">Registreer</Link> je dan aub eerst.</p>
                     </span>
                 </span>
         </>

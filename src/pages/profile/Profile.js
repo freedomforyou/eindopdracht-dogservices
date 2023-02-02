@@ -19,7 +19,7 @@ function Profile() {
             const token = localStorage.getItem('token');
 
             try {
-                const result = await axios.get('http://localhost:3000/660/private-content', {
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
