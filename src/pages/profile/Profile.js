@@ -15,6 +15,7 @@ function Profile() {
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('');
     const [error, toggleError] = useState(false);
+    const { login } = useContext(AuthContext);
 
     useEffect(() => {
         // Info ophalen middels een mounting-cycle
@@ -24,22 +25,17 @@ function Profile() {
             const token = localStorage.getItem('token');
 
             try {
-                const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/user', {
+                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
                     email: email,
                     password: password,
                     username: username,
                     role: ["user"]
                 });
                 console.log(result)
-
-                //     {
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //         Authorization: `Bearer ${token}`,
-                //     },
-                // }
-                // );
                 setProfileData(result.data);
+                // JWT token aan de login-functie van de context meegegeven
+                login(result.data.accessToken);
+
             } catch (e) {
                 console.error(e);
             }
@@ -55,22 +51,21 @@ function Profile() {
                     <Tile img={profilepic} imgDescription="Profilepicture" />
              </span>
                 <span className={styles.picture}>
-                    <h1 className="center">Profielpagina van {user.username}</h1>
+                    {/*<h1 className="center">Profielpagina van {user.username}</h1>*/}
                     <h2>Uw geregistreerde gegevens.</h2>
             <span className={styles.great}>
-                <p><strong>Gebruikersnaam:</strong> {user.username}</p>
-                <p><strong>Email:</strong> {user.email}</p>
+                {/*<p><strong>Gebruikersnaam:</strong> {user.username}</p>*/}
+                {/*<p><strong>Email:</strong> {user.email}</p>*/}
             </span>
 
-            {Object.keys(profileData).length > 0 &&
+            {/*{Object.keys(user).length > 0 &&*/}
                 <span className={styles.great}>
                     <h2>Informatie profiel</h2>
                     <span >
-                        <h3>{profileData.title}</h3>
-                        <p>{profileData.content}</p>
+                        <h3>{profileData.username}</h3>
+                        <p>{profileData.email}</p>
                     </span>
                 </span>
-            }
             <p>Terug naar de <Link to="/">Homepagina</Link></p>
                     </span>
                 </span>
