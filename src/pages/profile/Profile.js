@@ -10,6 +10,11 @@ import profilepic from "../../assets/profilepic.jpg";
 function Profile() {
     const [profileData, setProfileData] = useState({});
     const { user } = useContext(AuthContext);
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [role, setRole] = useState('');
+    const [error, toggleError] = useState(false);
 
     useEffect(() => {
         // Info ophalen middels een mounting-cycle
@@ -19,12 +24,21 @@ function Profile() {
             const token = localStorage.getItem('token');
 
             try {
-                const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
-                    },
+                const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/user', {
+                    email: email,
+                    password: password,
+                    username: username,
+                    role: ["user"]
                 });
+                console.log(result)
+
+                //     {
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //         Authorization: `Bearer ${token}`,
+                //     },
+                // }
+                // );
                 setProfileData(result.data);
             } catch (e) {
                 console.error(e);
