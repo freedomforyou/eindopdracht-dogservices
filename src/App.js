@@ -30,6 +30,7 @@ import SignUpServices from "./pages/registerservices/SignUpServices";
 import SignUpServer from "./pages/registerowners/SignUpServer";
 import SignInServer from "./pages/login/SignInServer";
 import Profile from "./pages/profile/Profile";
+import Test from "./pages/test/Test";
 import { AuthContext } from './context/AuthContext';
 
 function PrivateRoute({ children, isAuth, ...rest}) {
@@ -143,6 +144,10 @@ function App() {
 
                     <Route path="/droog">
                         <Dry />
+                    </Route>
+
+                    <Route path="/Test">
+                        <Test />
                     </Route>
 
                 <PrivateRoute exact path="/OverviewDogservices" isAuth={isAuthenticated}>

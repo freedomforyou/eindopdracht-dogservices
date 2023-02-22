@@ -16,7 +16,7 @@ function Register () {
                 <Tile title="Hondenbezitters">
                     <p>Meld u zich gerust gratis aan zodat uw vrolijke viervoeter regelmatig een frisse neus kan halen en de 'benen' kan strekken.</p>
                     <Button>
-                        <Link to="/signupserver" style={{ textDecoration: 'none' }} >Registreren Hondenbezitters Heroku</Link>
+                        <Link to="/signupserver" style={{ textDecoration: 'none' }} >Registreren Hondenbezitters</Link>
                     </Button>
                 </Tile>
                          </div>

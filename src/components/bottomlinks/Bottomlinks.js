@@ -45,13 +45,19 @@ function Bottomlinks () {
                     </li>
                     <li>
                         <NavLink to="/signupserver">
-                            Signup Heroku
+                            Signup
                         </NavLink>
                     </li>
 
                     <li>
                         <NavLink to="/signinserver">
-                            Signin Heroku
+                            Signin
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/test">
+                            Test
                         </NavLink>
                     </li>
                 </ul>

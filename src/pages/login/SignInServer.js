@@ -43,7 +43,7 @@ function SignInServer() {
                     <Tile img={loginpic} imgDescription="Loginpicture" />
              </span>
                 <span className={styles.picture}>
-                    <h1 className="center">Login pagina Heroku</h1>
+                    <h1 className="center">Login pagina</h1>
                     <p>Vul aub de inloggegevens in.</p>
 
             <form onSubmit={handleSubmit}>

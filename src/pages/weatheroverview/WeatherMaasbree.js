@@ -22,8 +22,8 @@ function WeatherVenlo () {
 
     return (
         <>
-            <span className={styles.test}>
-                <span className={styles.great}>
+            <span className={styles.great}>
+                <span className={styles.test}>
                     <div className={styles.picturetop} >
                         <h1>Weersverwachting Maasbree</h1>
                          <Tile img={maasbree} imgDescription="Maasbree" />

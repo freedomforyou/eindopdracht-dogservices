@@ -22,8 +22,8 @@ function WeatherTegelen () {
 
     return (
         <>
-            <span className={styles.test}>
-                <span className={styles.great}>
+            <span className={styles.great}>
+                <span className={styles.test}>
                     <div className={styles.picturetop} >
                         <h1>Weersverwachting Tegelen</h1>
                         <Tile img={tegelen} imgDescription="Tegelen" />

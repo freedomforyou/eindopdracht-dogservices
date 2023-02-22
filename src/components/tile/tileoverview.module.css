@@ -1,16 +1,16 @@
 
-imgoverview {
-    /*height: 300px;*/
-    width: 200px;
-}
+/*imgoverview {*/
+/*    !*height: 300px;*!*/
+/*    width: 200px;*/
+/*}*/
 
-sectionoverview {
-    background-color: #7fffd4;
-    margin: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: normal;
-    width: 400px;
-    padding: 10px;
-}
+/*sectionoverview {*/
+/*    background-color: #7fffd4;*/
+/*    margin: 10px 20px;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: normal;*/
+/*    width: 400px;*/
+/*    padding: 10px;*/
+/*}*/

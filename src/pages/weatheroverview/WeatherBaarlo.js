@@ -21,8 +21,8 @@ function WeatherBaarlo () {
 
     return (
         <>
-            <span className={styles.test}>
-                <span className={styles.great}>
+            <span className={styles.great}>
+                <span className={styles.test}>
                     <div className={styles.picturetop} >
                         <h1>Weersverwachting Baarlo</h1>
                          <Tile img={baarlo} imgDescription="Baarlo" />

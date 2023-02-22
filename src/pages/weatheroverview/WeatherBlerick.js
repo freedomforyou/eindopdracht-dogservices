@@ -23,8 +23,8 @@ function WeatherVenlo () {
 
     return (
         <>
-            <span className={styles.test}>
-                <span className={styles.great}>
+            <span className={styles.great}>
+                <span className={styles.test}>
                     <div className={styles.picturetop} >
                         <h1>Weersverwachting Blerick</h1>
                         <p>Opm : de weersverwachting voor Blerick is hetzelfde als die voor Venlo</p>

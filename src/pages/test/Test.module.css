@@ -1,12 +1,13 @@
 .test {
     background-color: #7fffd4;
+    /*background: blue;*/
     color: #000000;
     margin: 10px 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    max-width: 1100px;
+    max-width: 1000px;
     /*border: 1px solid blue;*/
     padding: 20px;
 }
@@ -30,9 +31,9 @@
     margin: 10px 16px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1100px;
+    /*flex-wrap: wrap;*/
+    justify-content: flex-start;
+    max-width: 1000px;
     border: 1px solid blue;
     padding: 20px;
 }
@@ -82,7 +83,7 @@
     flex-direction: row;
     /*flex-wrap: wrap;*/
     justify-content: space-evenly;
-    max-width: 1100px;
+    max-width: 1000px;
     /*border: 1px solid blue;*/
     padding: 20px;
 }
@@ -95,7 +96,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1100px;
+    max-width: 1000px;
     border: 1px solid blue;
     padding: 0px;
 }

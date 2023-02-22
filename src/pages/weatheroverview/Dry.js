@@ -13,7 +13,7 @@ function Dry () {
         try {
             const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=baarlo,nl&appid=${apiKey}&lang=nl&units=metric`);
             console.log(result.data);
-            dryData(result.data);
+            setDryData(result.data);
         } catch (e) {
             console.error(e);
         }
@@ -27,7 +27,7 @@ function Dry () {
                         <h1>Waar is het droog?</h1>
                          <Tile img={dry} imgDescription="Droog" />
                             <button className={styles.submit} type="button" onClick={fetchData}>
-                                Wat voor weer wordt het ?
+                                Waar is het droog ?
                             </button>
                         <p>  </p>
                             <button type="button">

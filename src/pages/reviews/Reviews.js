@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './Reviews.module.css'
 import dogservices from "../../data/dogservices.json";
 import {Link} from "react-router-dom";
+import { AuthContext } from '../../context/AuthContext';
 import Button from "../../components/button/button";
 
 function ReviewsPage() {
+    const { dogservice } = useContext(AuthContext);
+
     return (
         <>
             <span className={styles.test}>

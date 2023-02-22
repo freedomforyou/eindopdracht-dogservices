@@ -27,7 +27,7 @@ function Sun () {
                         <h1>Waar schijnt de zon?</h1>
                          <Tile img={sunpic} imgDescription="Zonneschijn" />
                             <button className={styles.submit} type="button" onClick={fetchData}>
-                                Wat voor weer wordt het ?
+                                Wat schijnt de zon ?
                             </button>
                         <p>  </p>
                             <button type="button">

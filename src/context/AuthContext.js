@@ -20,8 +20,8 @@ function AuthContextProvider({ children }) {
 
         // als er WEL een token is, haal dan opnieuw de gebruikersdata op
         if (token) {
-            const decoded = jwt_decode(token);
-            fetchUserData(decoded.sub, token);
+            // const decoded = jwt_decode(token);
+            fetchUserData( token);
         } else {
             // als er GEEN token is doen we niks, en zetten we de status op 'done'
             toggleIsAuth({
@@ -36,12 +36,12 @@ function AuthContextProvider({ children }) {
         // zet de token in de Local Storage
         localStorage.setItem('token', JWT);
         // decode de token zodat we de ID van de gebruiker hebben en data kunnen ophalen voor de context
-        const decoded = jwt_decode(JWT);
+        // const decoded = jwt_decode(JWT);
 
         // geef de ID, token en redirect-link mee aan de fetchUserData functie (staat hieronder)
-        fetchUserData(decoded.sub, JWT, '/profile');
+        fetchUserData( JWT, '/profile');
         // link de gebruiker door naar de profielpagina
-        // history.push('/profile');
+        history.push('/profile');
     }
 
     function logout() {
@@ -57,16 +57,16 @@ function AuthContextProvider({ children }) {
     }
 
     // Omdat we deze functie in login- en het mounting-effect gebruiken, staat hij hier gedeclareerd!
-    async function fetchUserData(id, token, redirectUrl) {
+    async function fetchUserData( token, redirectUrl) {
         try {
-            // haal gebruikersdata op met de token en id van de gebruiker
-            const result = await axios.get(`http://localhost:3000/600/users/${id}`, {
+            // haal gebruikersdata op met de token van de gebruiker
+            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
                 },
             });
-
+            console.log(result);
             // zet de gegevens in de state
             toggleIsAuth({
                 ...isAuth,
@@ -76,6 +76,7 @@ function AuthContextProvider({ children }) {
                     email: result.data.email,
                     id: result.data.id,
                     role: result.data.role,
+                    info: result.data.info,
                 },
                 status: 'done',
             });
